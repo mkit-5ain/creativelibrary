@@ -1,0 +1,3215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>CreativeLibrary</title>
+	<link rel="stylesheet" href="css/main.css" type="text/css" />
+	<link rel="stylesheet" href="css/slick.css">
+	<link rel="stylesheet" href="css/slick-theme.css">
+
+	<script type="text/javascript" src="js/libs/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="js/libs/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/libs/slick.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/ajax_cr.js"></script>
+</head>
+<body>
+	<div id="main_wrap">
+		<header id="header">
+			<section class="header_wrap">
+				<div class="header_contents_wrap">
+					<h2><img src="images/common/search_logo.jpg" alt="creativelibrary지금보고싶은 facebook광고소재를 찾아보세요" /></h2>
+					<!-- 검색 -->
+					<div class="main_search_wrap">
+						<input type="text" class="main_search" placeholder="광고주 명 또는 문구, 해시태그 , 광고 링크로 검색해보세요"/>
+						<button type="submit"><img src="images/icon/search_btn.jpg" alt="" /></button>
+					</div>
+					<!-- // 검색-->
+					<!-- 셀렉트 박스 -->
+					<div class="select_wrap clearfix">
+						<div class="select_inner_wrap clearfix">
+							<ul>
+								<li class="select_btn">
+									<div class="select" name="device_type"><p>노출위치 전체</p></div>
+									<ul class="select_view" name="device_type">
+										<li>노출위치 전체</li>
+										<li>PC</li>
+										<li>Mobile</li>
+									</ul>
+								</li>
+								<li class="select_btn">
+									<div class="select" name="page_category_filter"><p>업종 전체</p></div>
+									<ul class="select_view" name="page_category_filter">
+										<li>업종 전체</li>
+										<li>IT/Tech</li>
+										<li>공공</li>
+										<li>교육</li>
+										<li>금융</li>
+										<li>도/소매</li>
+										<li>서비스</li>
+										<li>쇼핑</li>
+										<li>스포츠/레저</li>
+										<li>엔터테인먼트</li>
+										<li>여행/숙박</li>
+										<li>예술/문화</li>
+										<li>음식</li>
+										<li>의료/건강</li>
+										<li>인물</li>
+										<li>자동차</li>
+										<li>장소/건물</li>
+										<li>제조</li>
+										<li>종교</li>
+										<li>패션/뷰티</li>
+										<li>회사</li>
+										<li>기타</li>
+									</ul>
+								</li>
+								<li class="select_btn">
+									<div class="select" name="template_type">
+										<p>형식 전체</p>
+									</div>
+									<ul class="select_view" name="template_type">
+										<li>형식 전체</li>
+										<li>단일 이미지</li>
+										<li>단일 동영상</li>
+										<li>슬라이드</li>
+										<li>여러 이미지</li>
+									</ul>
+								</li>
+								<li class="select_btn">
+									<div class="select" name="call_to_action_type"><p>행동유도 전체</p></div>
+									<ul class="select_view" name="call_to_action_type">
+										<li>행동유도 전체</li>
+										<li>버튼 없음</li>
+										<li>메뉴보기</li>
+										<li>지금 신청하기</li>
+										<li>지금 예약하기</li>
+										<li>문의하기</li>
+										<li>지금 기부하기</li>
+										<li>다운로드</li>
+										<li>더 알아보기</li>
+										<li>메시지 보내기</li>
+										<li>예약 요청하기</li>
+										<li>지금 구매하기</li>
+										<li>가입하기</li>
+										<li>동영상 더 보기</li>
+										<li>앱 사용하기</li>
+										<li>지금 설치</li>
+										<li>지금 듣기</li>
+										<li>게임하기</li>
+										<li>견적보기</li>
+										<li>구독하기</li>
+										<li>링크 열기</li>
+										<li>지금 전화</li>
+										<li>찾아가는 길 보기</li>
+										<li>저장</li>
+									</ul>
+								</li>
+								<li class="select_btn">
+									<div class="select" name="color_type"><p>색상 전체</p></div>
+									<ul class="select_view color_view" name="color_type">
+										<li class="all_color">색상전체</li>
+										<li class="brown">갈색</li>
+										<li class="red">빨강</li>
+										<li class="orange">주황</li>
+										<li class="yellow">노랑</li>
+										<li class="yellow_green">연두</li>
+										<li class="green">초록</li>
+										<li class="skyBlue">하늘</li>
+										<li class="wave">파랑</li>
+										<li class="pink">분홍</li>
+										<li class="purple">보라</li>
+										<li class="white">흰색</li>
+										<li class="gray">회색</li>
+										<li class="black">검정</li>
+									</ul>
+								</li>
+								<li class="select_btn">
+									<div class="select" name="order_type"><p>최근 수집 순</p></div>
+									<ul class="select_view" name="order_type">
+										<li>최근 수집 순</li>
+										<li>좋아요 순</li>
+										<li>댓글 순</li>
+										<li>공유 순</li>
+										<li>동영상 재생 순</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- // 셀렉트 박스 -->
+					<div class="loading_icon"><img src="images/icon/loading.png" alt="로딩아이콘"/></div>
+				</div>
+			</section>
+		</header>
+		<div id="container">
+			<div class="search_result_wrap">
+				<div class="result_left">
+					<div>검색결과<span>999,999</span>건&nbsp;/&nbsp;</div>
+					<div><span>13</span>Page</div>
+				</div>
+				<div class="button_right">
+					<button>광고 등록하기</button>
+					<div class="advertisement_pop">
+						<div class="advertisement_pop_wrap">
+							<h2><img src="images/common/registration_logo.jpg" alt="" /></h2>
+							<div class="main_search_wrap">
+								<div class="main_inner_search_wrap">
+									<input type="text" class="main_search" placeholder="등록 할 광고 링크를 입력하세요"/>
+									<button type="submit"><img src="images/icon/registration_btn.jpg" alt="" /></button>
+								</div>
+								<!--/////////////////////////////////////////////////////// 광고 등록 완료 ///////////////////////////////////////////////////////-->
+								<!-- <div class="complete_wrap">
+									<div class="text_box">광고가 등록 되었습니다. 5~10분 후 정상적으로 표시 됩니다.</div>
+									<button type="submit"><img src="images/icon/complete_icon.jpg" alt="" /></button>
+								</div> -->
+								<!--/////////////////////////////////////////////////////// 광고 등록 완료 ///////////////////////////////////////////////////////-->
+								<div class="advertisemen_info">
+									<p class="title">*&nbsp;광고 등록 방법</p>
+									<div class="info_box_wrap">
+										<div>
+											<p class="info_title">Step&nbsp;1</p>
+											<p>페이스북 광고 우측의<br /><span class="info_icon"><img src="images/icon/info_icon01.png" alt="" /></span><span>버튼 클릭</span></p>
+											<div><img src="images/common/registration_01.jpg" alt="" /></div>
+										</div>
+										<div>
+											<p class="info_title">Step&nbsp;2</p>
+											<p>
+												<span>리스트에서&nbsp;</span><span class="info_icon2"><img src="images/icon/info_icon02.png" alt="" /></span><span>퍼가기 클릭</span>
+												<br /><span style="font-size:12px;">(PC기준,모바일은 링크복사 클릭)</span>
+											</p>
+											<div><img src="images/common/registration_02.jpg" alt="" /></div>
+										</div>
+										<div>
+											<p class="info_title">Step&nbsp;3</p>
+											<p>생성 된 코드 복사</p>
+											<div><img src="images/common/registration_03.jpg" alt="" /></div>
+										</div>
+										<div>
+											<p class="info_title">Step&nbsp;4</p>
+											<p>복사한 코드를 <br />상단의 입력창에 등록</p>
+										</div>
+									</div>
+									<div class="loading_icon"><img src="images/icon/loading.png" alt="로딩아이콘"/></div>
+								</div>
+							</div>
+							<div class="clost_btn"><img src="images/icon/white_close_btn.png" alt="닫기버튼" /></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 로딩중일 경우-->
+			<div class="loading_wrap" style="display:none;">
+				<div>
+					<p>잠시만 기다려주세요</p>
+					<p>Creative Library가 광고를 찾고 있습니다.</p>
+				</div>
+			</div>
+			<!-- 로딩중일 경우-->
+			<!-- 검색결과가 없을경우-->
+			<div class="none_search_wrap" style="display:none;">
+				<h3>원하는 조건에 맞는 검색결과가 없습니다.</h3>
+				<p>- 광고주 명 또는 문구, 해시태그를 정확히 입력했는지 확인해 보세요.</p>
+				<p>- 검색 필터를 변경해 보세요.</p>
+				<p>- Creative Library에 아직 수집되지 않은 광고일 수 있습니다.</p>
+				<p>- ‘광고 등록하기’ 버튼을 통해 직접 등록해 주세요.</p>
+			</div>
+			<!-- // 검색결과가 없을경우-->
+			<div class="search_contents_wrap">
+				<ul name="search_ul">
+					<li class="contents_wrapper">
+						<div class="contents_title">
+							<p>KB국민카드</p>
+						</div>
+						<div class="main_contents">
+							<!-- 마스크-->
+							<div class="main_contents_mask"></div>
+							<!-- 마스크-->
+							<div class="cont_name_wrap">
+								<div class="cont_name">
+									<div><img src="images/icon/icon_bg.jpg" alt="" ></div>
+									<div>
+										<p>KB국민카드</p>
+										<p>Sponsored</p>
+									</div>
+								</div>
+								<!-- 좋아요 버튼 삭제 -->
+								<!-- <div class="cont_like_btn">페이지 좋아요</div> -->
+								<!-- // 좋아요 버튼 삭제 -->
+							</div>
+							<div class="cont_tag">
+								<p class="tag_text">여름이라 더우니까 시원~하게 한방 발급!</p>
+								<p class="tag_hash">#간편하고 #빠르게 #24시간_발급가능</p>
+							</div>
+							<div class="cont_main">
+								<div><img src="images/common/cont_main_img.jpg" alt="" /></div>
+							</div>
+							<div class="cont_roll_wrap">
+								<div class="roll_title">표시된제품:</div>
+								<div class="roll_main_wrap">
+									<ul class="roll_main_wrapper">
+										<li class="roll_content">
+											<div>
+												<div class="pro_img"><img src="images/common/pro_img.jpg" alt="이미지"/></div>
+												<div class="pro_wrap">
+													<p class="pro_name">제품명</p>
+													<p class="page_name">페이지명</p>
+													<p class="price_name">가격</p>
+												</div>
+											</div>
+										</li>
+										<li class="roll_content">
+											<div>
+												<div class="pro_img"><img src="images/common/pro_img.jpg" alt="이미지"/></div>
+												<div class="pro_wrap">
+													<p class="pro_name">제품명</p>
+													<p class="page_name">페이지명</p>
+													<p class="price_name">가격</p>
+												</div>
+											</div>
+										</li>
+										<li class="roll_content">
+											<div>
+												<div class="pro_img"><img src="images/common/pro_img.jpg" alt="이미지"/></div>
+												<div class="pro_wrap">
+													<p class="pro_name">제품명</p>
+													<p class="page_name">페이지명</p>
+													<p class="price_name">가격</p>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="cont_text">
+								<div>
+									<p>365일 24시간 빠른발급</p>
+									<p>신규회원 대상 연회비100% 캐시백</p>
+									<p>m.kbcard.co.kr</p>
+								</div>
+								<div>
+									<button>지금신청하기</button>
+								</div>
+							</div>
+							<div class="favorite_wrap">
+								<div><button><img src="images/icon/contents_img01.jpg" alt="" /></button><span>999,999</span></div>
+								<div><button><img src="images/icon/contents_img02.jpg" alt="" /></button><span>999,999</span></div>
+								<div><button><img src="images/icon/contents_img03.jpg" alt="" /></button><span>999,999</span></div>
+								<div><button><img src="images/icon/contents_img04.jpg" alt="" /></button><span>999,999</span></div>
+							</div>
+						</div>
+						<div class="contents_date">
+							<p>2017-08-16,&nbsp;10:00&nbsp;PM</p>
+						</div>
+						<!--/////////////////////////////////////////////////////// 컨텐츠 상세 팝업 START ///////////////////////////////////////////////////////-->
+						<div class="contents_pop">
+							<div class="pop_contents_wrap">
+								<div class="pop_title_wrap">
+									<div class="title_left">
+											<span class="page_name">페이지명</span>
+											<span class="cate_name">카테고리명</span>
+									</div>
+									<div class="title_right pop_close"><img src="images/icon/pop_close_btn.png" alt="" /></div>
+								</div>
+								<div class="pop_contents">
+									<div class="contents_left">
+										<div class="pop_inner_contents_tem">
+											<div class="pop_cont_name_wrap">
+												<div class="pop_cont_name">
+													<div><img src="images/icon/pop_icon_bg.jpg" alt="" ></div>
+													<div>
+														<p>KB국민카드</p>
+														<p>Sponsored</p>
+													</div>
+												</div>
+												<div class="pop_cont_like_btn">페이지 좋아요</div>
+											</div>
+											<div class="pop_cont_tag">
+												<p class="tag_text">여름이라 더우니까 시원~하게 한방 발급!</p>
+												<p class="tag_hash">#간편하고 #빠르게 #24시간_발급가능</p>
+											</div>
+											<div class="pop_cont_main">
+												<div><img src="images/common/pop_cont_main_img.jpg" alt="" /></div>
+											</div>
+											<div class="pop_cont_roll_wrap">
+												<div class="roll_title">표시된제품:</div>
+												<div class="roll_main_wrap">
+													<ul class="roll_main_wrapper">
+														<li class="roll_content">
+															<div>
+																<div class="pro_img"><img src="images/common/pop_pro_img.jpg" alt="이미지"/></div>
+																<div class="pro_wrap">
+																	<p class="pro_name">제품명</p>
+																	<p class="page_name">페이지명</p>
+																	<p class="price_name">가격</p>
+																</div>
+															</div>
+														</li>
+														<li class="roll_content">
+															<div>
+																<div class="pro_img"><img src="images/common/pop_pro_img.jpg" alt="이미지"/></div>
+																<div class="pro_wrap">
+																	<p class="pro_name">제품명</p>
+																	<p class="page_name">페이지명</p>
+																	<p class="price_name">가격</p>
+																</div>
+															</div>
+														</li>
+														<li class="roll_content">
+															<div>
+																<div class="pro_img"><img src="images/common/pop_pro_img.jpg" alt="이미지"/></div>
+																<div class="pro_wrap">
+																	<p class="pro_name">제품명</p>
+																	<p class="page_name">페이지명</p>
+																	<p class="price_name">가격</p>
+																</div>
+															</div>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<div class="pop_cont_text">
+												<div>
+													<p>365일 24시간 빠른발급</p>
+													<p>신규회원 대상 연회비100% 캐시백</p>
+													<p>m.kbcard.co.kr</p>
+												</div>
+												<div>
+													<button>지금신청하기</button>
+												</div>
+											</div>
+											<div class="pop_favorite_wrap">
+												<div><span><img src="images/icon/pop_contents_img_01.png" alt="" /></span><span>999,999</span></div>
+												<div><span><img src="images/icon/pop_contents_img_02.png" alt="" /></span><span>999,999</span></div>
+												<div><span><img src="images/icon/pop_contents_img_03.png" alt="" /></span><span>999,999</span></div>
+												<div><span><img src="images/icon/pop_contents_img_04.png" alt="" /></span><span>999,999</span></div>
+											</div>
+										</div>
+										<div class="pop_contents_date">
+											<div class="left_date">2017-08-16,&nbsp;10:00&nbsp;PM</div>
+											<div class="right">
+												<p>PC원본보기</p>
+												<p>Mobile 원본 보기</p>
+												<p>원본보기</p>
+											</div>
+										</div>
+									</div>
+									<div class="contents_right">
+										<div class="right_icon_wrap">
+											<!-- PC  -->
+											<div>
+												<p><img src="images/icon/pop_right_icon_01.jpg" alt="컴퓨터" /></p>
+												<p>PC</p>
+											</div>
+											<!-- PC -->
+											<!-- MOBILE -->
+											<div>
+												<p><img src="images/icon/pop_right_icon_mobile.jpg" alt="mobile" /></p>
+												<p>MOBILE</p>
+											</div>
+											<!-- MOBILE -->
+											<div>
+												<p><img src="images/icon/form_icon_01.jpg" alt="단일동영상" /></p>
+												<p>단일 동영상</p>
+												<!-- <p><img src="images/icon/form_icon_02.jpg" alt="단일이미지" /></p>
+												<p>단일 이미지</p>
+												<p><img src="images/icon/form_icon_03.jpg" alt="슬라이드" /></p>
+												<p>슬라이드</p>
+												<p><img src="images/icon/form_icon_04.jpg" alt="슬라이드쇼" /></p>
+												<p>슬라이드 쇼</p>
+												<p><img src="images/icon/form_icon_05.jpg" alt="여러 이미지" /></p>
+												<p>여러 이미지</p> -->
+											</div>
+											<div>
+												<p><img src="images/icon/color_1.jpg" alt="전체" /></p>
+												<p>전체</p>
+												<!-- <p><img src="images/icon/color_2.jpg" alt="갈색" /></p>
+												<p>갈색</p>
+												<p><img src="images/icon/color_3.jpg" alt="빨강" /></p>
+												<p>빨강</p>
+												<p><img src="images/icon/color_4.jpg" alt="주황" /></p>
+												<p>주황</p>
+												<p><img src="images/icon/color_5.jpg" alt="노랑" /></p>
+												<p>노랑</p>
+												<p><img src="images/icon/color_6.jpg" alt="연두" /></p>
+												<p>연두</p>
+												<p><img src="images/icon/color_7.jpg" alt="초록" /></p>
+												<p>초록</p>
+												<p><img src="images/icon/color_8.jpg" alt="하늘" /></p>
+												<p>하늘</p>
+												<p><img src="images/icon/color_9.jpg" alt="파랑" /></p>
+												<p>파랑</p>
+												<p><img src="images/icon/color_10.jpg" alt="분홍" /></p>
+												<p>분홍</p>
+												<p><img src="images/icon/color_11.jpg" alt="보라" /></p>
+												<p>보라</p>
+												<p><img src="images/icon/white_color.jpg" alt="흰색" /></p>
+												<p>흰색</p>
+												<p><img src="images/icon/color_13.jpg" alt="회색" /></p>
+												<p>회색</p>
+												<p><img src="images/icon/color_14.jpg" alt="검정" /></p>
+												<p>검정</p> -->
+											</div>
+										</div>
+										<div class="pop_detail">
+											<div class="detail_wrap">
+												<table class="detail_table_wrap">
+													<colgroup>
+														<col width="80"/>
+														<col width="451"/>
+													</colgroup>
+													<tbody>
+														<tr>
+															<th class="left_title"><div>문구</div></th>
+															<td class="right_detail">
+																<div class="detail_text">
+																	<p>해외여행 가세요? 직구 좋아하세요?</p>
+																	<p>KB국민카드가 해외이용 고객님께 드리는</p>
+																	<p>놀라운 혜택을 확인하세요!</p>
+																</div>
+																<div class="detail_text_limit">(1,345 Text)</div>
+																<div class="detail_view">
+																	<p class="detail_view_title">*자세히 보기</p>
+																	<p>PC - <a href="">https://goo.gl/985bqp</a></p>
+																	<p>모바일 - <a href="">https://goo.gl/4iwmMc</a></p>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<th class="left_title">제목</th>
+															<td class="right_detail">
+																<p>30년 장인의 손을 거친 특별함 59,000원~ </p>
+																<p class="text_info"><span class="detail_text_limit">(1,345 Text)</span></p>
+															</td>
+														</tr>
+														<tr>
+															<th class="left_title">링크설명</th>
+															<td class="right_detail">
+																<p>스트라이프는 괜찮은 셔츠의 기준이 높습니다.</p>
+																<p class="text_info"><span class="detail_text_limit">(1,345 Text)</span></p>
+															</td>
+														</tr>
+														<tr>
+															<th class="left_title">링크</th>
+															<td class="right_detail"><a href="">STRIPES.CO.KR</a></td>
+														</tr>
+														<tr>
+															<th class="left_title">행동유도</th>
+															<!-- a태그 삭제 -->
+															<td class="right_detail">지금 구매하기</td>
+															<!-- a태그 삭제 -->
+														</tr>
+														<tr>
+															<th class="left_title">해시태그</th>
+															<td class="right_detail">
+																<div class="hash_tag">
+																	<p><a href="">#활용도200점</a></p>
+																	<p><a href="">#쉽죠</a></p>
+																	<p><a href="">#남자는_셔츠</a></p>
+																	<p><a href="">#다양한_원단</a></p>
+																</div>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+										<div class="target_wrap">
+											<div class="target_title">추정 타겟팅 정보</div>
+											<div class="target_detail">
+												<table>
+													<colgroup>
+														<col width="80"/>
+														<col width="183"/>
+														<col width="80"/>
+														<col width="183"/>
+													</colgroup>
+													<tbody>
+														<tr>
+															<th><img src="images/icon/pop_right_men.jpg" alt="남자" /></th>
+															<td>
+																<div>
+																	<p>20-30세 (대한민국,&nbsp;서울)</p>
+																	<p>35-40세 (대한민국,&nbsp;경기도)</p>
+																</div>
+															</td>
+															<th><img src="images/icon/pop_right_girl.jpg" alt="여자" /></th>
+															<td>-</td>
+														</tr>
+													</tbody>
+												</table>
+												<p class="info_text">*페이스북 표본 집단을 토대로 추정한 정보이므로 100% 일치하지 않을 수도 있습니다.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--/////////////////////////////////////////////////////// 컨텐츠 상세 팝업 END ///////////////////////////////////////////////////////-->
+					</li>
+					<li class="contents_wrapper">
+						<div class="contents_title">
+							<p>KB국민카드</p>
+						</div>
+						<div class="main_contents">
+							<!-- 마스크-->
+							<div class="main_contents_mask"></div>
+							<!-- 마스크-->
+							<div class="cont_name_wrap">
+								<div class="cont_name">
+									<div><img src="images/icon/icon_bg.jpg" alt="" ></div>
+									<div>
+										<p>KB국민카드</p>
+										<p>Sponsored</p>
+									</div>
+								</div>
+								<!-- 좋아요 버튼 삭제 -->
+								<!-- <div class="cont_like_btn">페이지 좋아요</div> -->
+								<!-- // 좋아요 버튼 삭제 -->
+							</div>
+							<div class="cont_tag">
+								<p class="tag_text">여름이라 더우니까 시원~하게 한방 발급!</p>
+								<p class="tag_hash">#간편하고 #빠르게 #24시간_발급가능</p>
+							</div>
+							<div class="cont_main_tem_02">
+								<div class="main_img"><img src="images/common/cont_main_img.jpg" alt="" /></div>
+								<div class="sub_img">
+									<div><img src="images/common/cont_main_img.jpg" alt="" /></div>
+									<div><img src="images/common/cont_main_img.jpg" alt="" /></div>
+									<!-- 남은 이미지 갯수-->
+									<div>
+										<img src="images/common/cont_main_img.jpg" alt="" />
+										<div class="more_bg">00장+</div>
+									</div>
+									<!-- -->
+								</div>
+							</div>
+							<div class="favorite_wrap">
+								<div><button><img src="images/icon/contents_img01.jpg" alt="" /></button><span>999,999</span></div>
+								<div><button><img src="images/icon/contents_img02.jpg" alt="" /></button><span>999,999</span></div>
+								<div><button><img src="images/icon/contents_img03.jpg" alt="" /></button><span>999,999</span></div>
+								<div><button><img src="images/icon/contents_img04.jpg" alt="" /></button><span>999,999</span></div>
+							</div>
+						</div>
+						<div class="contents_date">
+							<p>2017-08-16,&nbsp;10:00&nbsp;PM</p>
+						</div>
+						<!--/////////////////////////////////////////////////////// 컨텐츠 상세 팝업 START ///////////////////////////////////////////////////////-->
+						<div class="contents_pop">
+							<div class="pop_contents_wrap">
+								<div class="pop_title_wrap">
+									<div class="title_left">
+											<span class="page_name">페이지명</span>
+											<span class="cate_name">카테고리명</span>
+									</div>
+									<div class="title_right pop_close"><img src="images/icon/pop_close_btn.png" alt="" /></div>
+								</div>
+								<div class="pop_contents">
+									<div class="contents_left">
+										<div class="pop_inner_contents_tem_02">
+											<div class="pop_cont_name_wrap">
+												<div class="pop_cont_name">
+													<div><img src="images/icon/pop_icon_bg.jpg" alt="" ></div>
+													<div>
+														<p>KB국민카드</p>
+														<p>Sponsored</p>
+													</div>
+												</div>
+												<div class="pop_cont_like_btn">페이지 좋아요</div>
+											</div>
+											<div class="pop_cont_tag">
+												<p class="tag_text">여름이라 더우니까 시원~하게 한방 발급!</p>
+												<p class="tag_hash">#간편하고 #빠르게 #24시간_발급가능</p>
+											</div>
+											<div class="pop_cont_main">
+												<div class="main_img"><img src="images/common/pop_cont_main_img.jpg" alt="" /></div>
+												<div class="sub_img">
+													<div><img src="images/common/cont_main_img.jpg" alt="" /></div>
+													<div><img src="images/common/cont_main_img.jpg" alt="" /></div>
+													<!-- 남은 이미지 갯수-->
+													<div>
+														<img src="images/common/cont_main_img.jpg" alt="" />
+														<div class="more_bg">00장+</div>
+													</div>
+													<!-- -->
+												</div>
+											</div>
+											<div class="pop_favorite_wrap">
+												<div><span><img src="images/icon/pop_contents_img_01.png" alt="" /></span><span>999,999</span></div>
+												<div><span><img src="images/icon/pop_contents_img_02.png" alt="" /></span><span>999,999</span></div>
+												<div><span><img src="images/icon/pop_contents_img_03.png" alt="" /></span><span>999,999</span></div>
+												<div><span><img src="images/icon/pop_contents_img_04.png" alt="" /></span><span>999,999</span></div>
+											</div>
+										</div>
+										<div class="pop_contents_date">
+											<div class="left_date">2017-08-16,&nbsp;10:00&nbsp;PM</div>
+											<div class="right">
+												<p>PC원본보기</p>
+												<p>Mobile 원본 보기</p>
+												<p>원본보기</p>
+											</div>
+										</div>
+									</div>
+									<div class="contents_right">
+										<div class="right_icon_wrap">
+											<div>
+												<!-- pc + mobile 일 경우 -->
+												<p><img src="images/icon/pop_right_icon_all.jpg" alt="컴퓨터" /></p>
+												<p>전체</p>
+												<!-- pc + mobile 일 경우 -->
+											</div>
+											<div>
+												<p><img src="images/icon/form_icon_01.jpg" alt="단일동영상" /></p>
+												<p>단일 동영상</p>
+												<!-- <p><img src="images/icon/form_icon_02.jpg" alt="단일이미지" /></p>
+												<p>단일 이미지</p>
+												<p><img src="images/icon/form_icon_03.jpg" alt="슬라이드" /></p>
+												<p>슬라이드</p>
+												<p><img src="images/icon/form_icon_04.jpg" alt="슬라이드쇼" /></p>
+												<p>슬라이드 쇼</p>
+												<p><img src="images/icon/form_icon_05.jpg" alt="여러 이미지" /></p>
+												<p>여러 이미지</p> -->
+											</div>
+											<div>
+												<p><img src="images/icon/color_1.jpg" alt="전체" /></p>
+												<p>전체</p>
+												<!-- <p><img src="images/icon/color_2.jpg" alt="갈색" /></p>
+												<p>갈색</p>
+												<p><img src="images/icon/color_3.jpg" alt="빨강" /></p>
+												<p>빨강</p>
+												<p><img src="images/icon/color_4.jpg" alt="주황" /></p>
+												<p>주황</p>
+												<p><img src="images/icon/color_5.jpg" alt="노랑" /></p>
+												<p>노랑</p>
+												<p><img src="images/icon/color_6.jpg" alt="연두" /></p>
+												<p>연두</p>
+												<p><img src="images/icon/color_7.jpg" alt="초록" /></p>
+												<p>초록</p>
+												<p><img src="images/icon/color_8.jpg" alt="하늘" /></p>
+												<p>하늘</p>
+												<p><img src="images/icon/color_9.jpg" alt="파랑" /></p>
+												<p>파랑</p>
+												<p><img src="images/icon/color_10.jpg" alt="분홍" /></p>
+												<p>분홍</p>
+												<p><img src="images/icon/color_11.jpg" alt="보라" /></p>
+												<p>보라</p>
+												<p><img src="images/icon/white_color.jpg" alt="흰색" /></p>
+												<p>흰색</p>
+												<p><img src="images/icon/color_13.jpg" alt="회색" /></p>
+												<p>회색</p>
+												<p><img src="images/icon/color_14.jpg" alt="검정" /></p>
+												<p>검정</p> -->
+											</div>
+										</div>
+										<div class="pop_detail">
+											<div class="detail_wrap">
+												<table class="detail_table_wrap">
+													<colgroup>
+														<col width="80"/>
+														<col width="451"/>
+													</colgroup>
+													<tbody>
+														<tr>
+															<th class="left_title"><div>문구</div></th>
+															<td class="right_detail">
+																<div class="detail_text">
+																	<p>해외여행 가세요? 직구 좋아하세요?</p>
+																	<p>KB국민카드가 해외이용 고객님께 드리는</p>
+																	<p>놀라운 혜택을 확인하세요!</p>
+																</div>
+																<div class="detail_text_limit">(1,345 Text)</div>
+																<div class="detail_view">
+																	<p class="detail_view_title">*자세히 보기</p>
+																	<p>PC - <a href="">https://goo.gl/985bqp</a></p>
+																	<p>모바일 - <a href="">https://goo.gl/4iwmMc</a></p>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<th class="left_title">제목</th>
+															<td class="right_detail">
+																<p>30년 장인의 손을 거친 특별함 59,000원~ </p>
+																<p class="text_info"><span class="detail_text_limit">(1,345 Text)</span></p>
+															</td>
+														</tr>
+														<tr>
+															<th class="left_title">링크설명</th>
+															<td class="right_detail">
+																<p>스트라이프는 괜찮은 셔츠의 기준이 높습니다.</p>
+																<p class="text_info"><span class="detail_text_limit">(1,345 Text)</span></p>
+															</td>
+														</tr>
+														<tr>
+															<th class="left_title">링크</th>
+															<td class="right_detail"><a href="">STRIPES.CO.KR</a></td>
+														</tr>
+														<tr>
+															<th class="left_title">행동유도</th>
+															<!-- a태그 삭제 -->
+															<td class="right_detail">지금 구매하기</td>
+															<!-- a태그 삭제 -->
+														</tr>
+														<tr>
+															<th class="left_title">해시태그</th>
+															<td class="right_detail">
+																<div class="hash_tag">
+																	<p><a href="">#활용도200점</a></p>
+																	<p><a href="">#쉽죠</a></p>
+																	<p><a href="">#남자는_셔츠</a></p>
+																	<p><a href="">#다양한_원단</a></p>
+																</div>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+										<div class="target_wrap">
+											<div class="target_title">추정 타겟팅 정보</div>
+											<div class="target_detail">
+												<table>
+													<colgroup>
+														<col width="80"/>
+														<col width="183"/>
+														<col width="80"/>
+														<col width="183"/>
+													</colgroup>
+													<tbody>
+														<tr>
+															<th><img src="images/icon/pop_right_men.jpg" alt="남자" /></th>
+															<td>
+																<div>
+																	<p>20-30세 (대한민국,&nbsp;서울)</p>
+																	<p>35-40세 (대한민국,&nbsp;경기도)</p>
+																</div>
+															</td>
+															<th><img src="images/icon/pop_right_girl.jpg" alt="여자" /></th>
+															<td>-</td>
+														</tr>
+													</tbody>
+												</table>
+												<p class="info_text">*페이스북 표본 집단을 토대로 추정한 정보이므로 100% 일치하지 않을 수도 있습니다.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--/////////////////////////////////////////////////////// 컨텐츠 상세 팝업 END ///////////////////////////////////////////////////////-->
+					</li>
+					<li class="contents_wrapper">
+						<div class="contents_title">
+							<p>KB국민카드</p>
+						</div>
+						<div class="main_contents">
+							<!-- 마스크-->
+							<div class="main_contents_mask"></div>
+							<!-- 마스크-->
+							<div class="cont_name_wrap">
+								<div class="cont_name">
+									<div><img src="images/icon/icon_bg.jpg" alt="" ></div>
+									<div>
+										<p>KB국민카드</p>
+										<p>Sponsored</p>
+									</div>
+								</div>
+								<!-- 좋아요 버튼 삭제 -->
+								<!-- <div class="cont_like_btn">페이지 좋아요</div> -->
+								<!-- // 좋아요 버튼 삭제 -->
+							</div>
+							<div class="cont_tag">
+								<p class="tag_text">여름이라 더우니까 시원~하게 한방 발급!</p>
+								<p class="tag_hash">#간편하고 #빠르게 #24시간_발급가능</p>
+							</div>
+							<div class="cont_main_tem_03">
+								<div class="main_img"><img src="images/common/cont_main_img.jpg" alt="" /></div>
+								<div class="sub_img">
+									<div><img src="images/common/cont_main_img.jpg" alt="" /></div>
+									<div><img src="images/common/cont_main_img.jpg" alt="" /></div>
+									<!-- 남은 이미지 갯수-->
+									<div>
+										<img src="images/common/cont_main_img.jpg" alt="" />
+										<div class="more_bg">00장+</div>
+									</div>
+									<!-- -->
+								</div>
+							</div>
+							<div class="favorite_wrap">
+								<div><button><img src="images/icon/contents_img01.jpg" alt="" /></button><span>999,999</span></div>
+								<div><button><img src="images/icon/contents_img02.jpg" alt="" /></button><span>999,999</span></div>
+								<div><button><img src="images/icon/contents_img03.jpg" alt="" /></button><span>999,999</span></div>
+								<div><button><img src="images/icon/contents_img04.jpg" alt="" /></button><span>999,999</span></div>
+							</div>
+						</div>
+						<div class="contents_date">
+							<p>2017-08-16,&nbsp;10:00&nbsp;PM</p>
+						</div>
+						<!--/////////////////////////////////////////////////////// 컨텐츠 상세 팝업 START ///////////////////////////////////////////////////////-->
+						<div class="contents_pop">
+							<div class="pop_contents_wrap">
+								<div class="pop_title_wrap">
+									<div class="title_left">
+											<span class="page_name">페이지명</span>
+											<span class="cate_name">카테고리명</span>
+									</div>
+									<div class="title_right pop_close"><img src="images/icon/pop_close_btn.png" alt="" /></div>
+								</div>
+								<div class="pop_contents">
+									<div class="contents_left">
+										<div class="pop_inner_contents_tem_03">
+											<div class="pop_cont_name_wrap">
+												<div class="pop_cont_name">
+													<div><img src="images/icon/pop_icon_bg.jpg" alt="" ></div>
+													<div>
+														<p>KB국민카드</p>
+														<p>Sponsored</p>
+													</div>
+												</div>
+												<div class="pop_cont_like_btn">페이지 좋아요</div>
+											</div>
+											<div class="pop_cont_tag">
+												<p class="tag_text">여름이라 더우니까 시원~하게 한방 발급!</p>
+												<p class="tag_hash">#간편하고 #빠르게 #24시간_발급가능</p>
+											</div>
+											<div class="pop_cont_main">
+												<div class="main_img"><img src="images/common/pop_cont_main_img.jpg" alt="" /></div>
+												<div class="sub_img">
+													<div><img src="images/common/cont_main_img.jpg" alt="" /></div>
+													<div><img src="images/common/cont_main_img.jpg" alt="" /></div>
+													<!-- 남은 이미지 갯수-->
+													<div>
+														<img src="images/common/cont_main_img.jpg" alt="" />
+														<div class="more_bg">00장+</div>
+													</div>
+													<!-- -->
+												</div>
+											</div>
+											<div class="pop_favorite_wrap">
+												<div><span><img src="images/icon/pop_contents_img_01.png" alt="" /></span><span>999,999</span></div>
+												<div><span><img src="images/icon/pop_contents_img_02.png" alt="" /></span><span>999,999</span></div>
+												<div><span><img src="images/icon/pop_contents_img_03.png" alt="" /></span><span>999,999</span></div>
+												<div><span><img src="images/icon/pop_contents_img_04.png" alt="" /></span><span>999,999</span></div>
+											</div>
+										</div>
+										<div class="pop_contents_date">
+											<div class="left_date">2017-08-16,&nbsp;10:00&nbsp;PM</div>
+											<div class="right">
+												<p>PC원본보기</p>
+												<p>Mobile 원본 보기</p>
+												<p>원본보기</p>
+											</div>
+										</div>
+									</div>
+									<div class="contents_right">
+										<div class="right_icon_wrap">
+											<div>
+												<p><img src="images/icon/pop_right_icon_01.jpg" alt="컴퓨터" /></p>
+												<p>MOBILE</p>
+											</div>
+											<div>
+												<p><img src="images/icon/form_icon_01.jpg" alt="단일동영상" /></p>
+												<p>단일 동영상</p>
+												<!-- <p><img src="images/icon/form_icon_02.jpg" alt="단일이미지" /></p>
+												<p>단일 이미지</p>
+												<p><img src="images/icon/form_icon_03.jpg" alt="슬라이드" /></p>
+												<p>슬라이드</p>
+												<p><img src="images/icon/form_icon_04.jpg" alt="슬라이드쇼" /></p>
+												<p>슬라이드 쇼</p>
+												<p><img src="images/icon/form_icon_05.jpg" alt="여러 이미지" /></p>
+												<p>여러 이미지</p> -->
+											</div>
+											<div>
+												<p><img src="images/icon/color_1.jpg" alt="전체" /></p>
+												<p>전체</p>
+												<!-- <p><img src="images/icon/color_2.jpg" alt="갈색" /></p>
+												<p>갈색</p>
+												<p><img src="images/icon/color_3.jpg" alt="빨강" /></p>
+												<p>빨강</p>
+												<p><img src="images/icon/color_4.jpg" alt="주황" /></p>
+												<p>주황</p>
+												<p><img src="images/icon/color_5.jpg" alt="노랑" /></p>
+												<p>노랑</p>
+												<p><img src="images/icon/color_6.jpg" alt="연두" /></p>
+												<p>연두</p>
+												<p><img src="images/icon/color_7.jpg" alt="초록" /></p>
+												<p>초록</p>
+												<p><img src="images/icon/color_8.jpg" alt="하늘" /></p>
+												<p>하늘</p>
+												<p><img src="images/icon/color_9.jpg" alt="파랑" /></p>
+												<p>파랑</p>
+												<p><img src="images/icon/color_10.jpg" alt="분홍" /></p>
+												<p>분홍</p>
+												<p><img src="images/icon/color_11.jpg" alt="보라" /></p>
+												<p>보라</p>
+												<p><img src="images/icon/white_color.jpg" alt="흰색" /></p>
+												<p>흰색</p>
+												<p><img src="images/icon/color_13.jpg" alt="회색" /></p>
+												<p>회색</p>
+												<p><img src="images/icon/color_14.jpg" alt="검정" /></p>
+												<p>검정</p> -->
+											</div>
+										</div>
+										<div class="pop_detail">
+											<div class="detail_wrap">
+												<table class="detail_table_wrap">
+													<colgroup>
+														<col width="80"/>
+														<col width="451"/>
+													</colgroup>
+													<tbody>
+														<tr>
+															<th class="left_title"><div>문구</div></th>
+															<td class="right_detail">
+																<div class="detail_text">
+																	<p>해외여행 가세요? 직구 좋아하세요?</p>
+																	<p>KB국민카드가 해외이용 고객님께 드리는</p>
+																	<p>놀라운 혜택을 확인하세요!</p>
+																</div>
+																<div class="detail_text_limit">(1,345 Text)</div>
+																<div class="detail_view">
+																	<p class="detail_view_title">*자세히 보기</p>
+																	<p>PC - <a href="">https://goo.gl/985bqp</a></p>
+																	<p>모바일 - <a href="">https://goo.gl/4iwmMc</a></p>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<th class="left_title">제목</th>
+															<td class="right_detail">
+																<p>30년 장인의 손을 거친 특별함 59,000원~ </p>
+																<p class="text_info"><span class="detail_text_limit">(1,345 Text)</span></p>
+															</td>
+														</tr>
+														<tr>
+															<th class="left_title">링크설명</th>
+															<td class="right_detail">
+																<p>스트라이프는 괜찮은 셔츠의 기준이 높습니다.</p>
+																<p class="text_info"><span class="detail_text_limit">(1,345 Text)</span></p>
+															</td>
+														</tr>
+														<tr>
+															<th class="left_title">링크</th>
+															<td class="right_detail"><a href="">STRIPES.CO.KR</a></td>
+														</tr>
+														<tr>
+															<th class="left_title">행동유도</th>
+															<!-- a태그 삭제 -->
+															<td class="right_detail">지금 구매하기</td>
+															<!-- a태그 삭제 -->
+														</tr>
+														<tr>
+															<th class="left_title">해시태그</th>
+															<td class="right_detail">
+																<div class="hash_tag">
+																	<p><a href="">#활용도200점</a></p>
+																	<p><a href="">#쉽죠</a></p>
+																	<p><a href="">#남자는_셔츠</a></p>
+																	<p><a href="">#다양한_원단</a></p>
+																</div>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+										<div class="target_wrap">
+											<div class="target_title">추정 타겟팅 정보</div>
+											<div class="target_detail">
+												<table>
+													<colgroup>
+														<col width="80"/>
+														<col width="183"/>
+														<col width="80"/>
+														<col width="183"/>
+													</colgroup>
+													<tbody>
+														<tr>
+															<th><img src="images/icon/pop_right_men.jpg" alt="남자" /></th>
+															<td>
+																<div>
+																	<p>20-30세 (대한민국,&nbsp;서울)</p>
+																	<p>35-40세 (대한민국,&nbsp;경기도)</p>
+																</div>
+															</td>
+															<th><img src="images/icon/pop_right_girl.jpg" alt="여자" /></th>
+															<td>-</td>
+														</tr>
+													</tbody>
+												</table>
+												<p class="info_text">*페이스북 표본 집단을 토대로 추정한 정보이므로 100% 일치하지 않을 수도 있습니다.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--/////////////////////////////////////////////////////// 컨텐츠 상세 팝업 END ///////////////////////////////////////////////////////-->
+					</li>
+					<li class="contents_wrapper">
+						<div class="contents_title">
+							<p>KB국민카드</p>
+						</div>
+						<div class="main_contents">
+							<!-- 마스크-->
+							<div class="main_contents_mask"></div>
+							<!-- 마스크-->
+							<div class="cont_name_wrap">
+								<div class="cont_name">
+									<div><img src="images/icon/icon_bg.jpg" alt="" ></div>
+									<div>
+										<p>KB국민카드</p>
+										<p>Sponsored</p>
+									</div>
+								</div>
+								<!-- 좋아요 버튼 삭제 -->
+								<!-- <div class="cont_like_btn">페이지 좋아요</div> -->
+								<!-- // 좋아요 버튼 삭제 -->
+							</div>
+							<div class="cont_tag">
+								<p class="tag_text">여름이라 더우니까 시원~하게 한방 발급!</p>
+								<p class="tag_hash">#간편하고 #빠르게 #24시간_발급가능</p>
+							</div>
+							<div class="cont_main_tem_04">
+								<div class="main_img">
+										<div><img src="images/common/cont_main_img.jpg" alt="" /></div>
+										<div><img src="images/common/cont_main_img.jpg" alt="" /></div>
+										<div><img src="images/common/cont_main_img.jpg" alt="" /></div>
+										<div><img src="images/common/cont_main_img.jpg" alt="" /></div>
+								</div>
+							</div>
+							<div class="favorite_wrap">
+								<div><button><img src="images/icon/contents_img01.jpg" alt="" /></button><span>999,999</span></div>
+								<div><button><img src="images/icon/contents_img02.jpg" alt="" /></button><span>999,999</span></div>
+								<div><button><img src="images/icon/contents_img03.jpg" alt="" /></button><span>999,999</span></div>
+								<div><button><img src="images/icon/contents_img04.jpg" alt="" /></button><span>999,999</span></div>
+							</div>
+						</div>
+						<div class="contents_date">
+							<p>2017-08-16,&nbsp;10:00&nbsp;PM</p>
+						</div>
+						<!--/////////////////////////////////////////////////////// 컨텐츠 상세 팝업 START ///////////////////////////////////////////////////////-->
+						<div class="contents_pop">
+							<div class="pop_contents_wrap">
+								<div class="pop_title_wrap">
+									<div class="title_left">
+											<span class="page_name">페이지명</span>
+											<span class="cate_name">카테고리명</span>
+									</div>
+									<div class="title_right pop_close"><img src="images/icon/pop_close_btn.png" alt="" /></div>
+								</div>
+								<div class="pop_contents">
+									<div class="contents_left">
+										<div class="pop_inner_contents_tem_04">
+											<div class="pop_cont_name_wrap">
+												<div class="pop_cont_name">
+													<div><img src="images/icon/pop_icon_bg.jpg" alt="" ></div>
+													<div>
+														<p>KB국민카드</p>
+														<p>Sponsored</p>
+													</div>
+												</div>
+												<div class="pop_cont_like_btn">페이지 좋아요</div>
+											</div>
+											<div class="pop_cont_tag">
+												<p class="tag_text">여름이라 더우니까 시원~하게 한방 발급!</p>
+												<p class="tag_hash">#간편하고 #빠르게 #24시간_발급가능</p>
+											</div>
+											<div class="main_img">
+												<div><img src="images/common/cont_main_img.jpg" alt="" /></div>
+												<div><img src="images/common/cont_main_img.jpg" alt="" /></div>
+												<div><img src="images/common/cont_main_img.jpg" alt="" /></div>
+												<div><img src="images/common/cont_main_img.jpg" alt="" /></div>
+										</div>
+											<div class="pop_favorite_wrap">
+												<div><span><img src="images/icon/pop_contents_img_01.png" alt="" /></span><span>999,999</span></div>
+												<div><span><img src="images/icon/pop_contents_img_02.png" alt="" /></span><span>999,999</span></div>
+												<div><span><img src="images/icon/pop_contents_img_03.png" alt="" /></span><span>999,999</span></div>
+												<div><span><img src="images/icon/pop_contents_img_04.png" alt="" /></span><span>999,999</span></div>
+											</div>
+										</div>
+										<div class="pop_contents_date">
+											<div class="left_date">2017-08-16,&nbsp;10:00&nbsp;PM</div>
+											<div class="right">
+												<p>PC원본보기</p>
+												<p>Mobile 원본 보기</p>
+												<p>원본보기</p>
+											</div>
+										</div>
+									</div>
+									<div class="contents_right">
+										<div class="right_icon_wrap">
+											<div>
+												<p><img src="images/icon/pop_right_icon_01.jpg" alt="컴퓨터" /></p>
+												<p>MOBILE</p>
+											</div>
+											<div>
+												<p><img src="images/icon/form_icon_01.jpg" alt="단일동영상" /></p>
+												<p>단일 동영상</p>
+												<!-- <p><img src="images/icon/form_icon_02.jpg" alt="단일이미지" /></p>
+												<p>단일 이미지</p>
+												<p><img src="images/icon/form_icon_03.jpg" alt="슬라이드" /></p>
+												<p>슬라이드</p>
+												<p><img src="images/icon/form_icon_04.jpg" alt="슬라이드쇼" /></p>
+												<p>슬라이드 쇼</p>
+												<p><img src="images/icon/form_icon_05.jpg" alt="여러 이미지" /></p>
+												<p>여러 이미지</p> -->
+											</div>
+											<div>
+												<p><img src="images/icon/color_1.jpg" alt="전체" /></p>
+												<p>전체</p>
+												<!-- <p><img src="images/icon/color_2.jpg" alt="갈색" /></p>
+												<p>갈색</p>
+												<p><img src="images/icon/color_3.jpg" alt="빨강" /></p>
+												<p>빨강</p>
+												<p><img src="images/icon/color_4.jpg" alt="주황" /></p>
+												<p>주황</p>
+												<p><img src="images/icon/color_5.jpg" alt="노랑" /></p>
+												<p>노랑</p>
+												<p><img src="images/icon/color_6.jpg" alt="연두" /></p>
+												<p>연두</p>
+												<p><img src="images/icon/color_7.jpg" alt="초록" /></p>
+												<p>초록</p>
+												<p><img src="images/icon/color_8.jpg" alt="하늘" /></p>
+												<p>하늘</p>
+												<p><img src="images/icon/color_9.jpg" alt="파랑" /></p>
+												<p>파랑</p>
+												<p><img src="images/icon/color_10.jpg" alt="분홍" /></p>
+												<p>분홍</p>
+												<p><img src="images/icon/color_11.jpg" alt="보라" /></p>
+												<p>보라</p>
+												<p><img src="images/icon/white_color.jpg" alt="흰색" /></p>
+												<p>흰색</p>
+												<p><img src="images/icon/color_13.jpg" alt="회색" /></p>
+												<p>회색</p>
+												<p><img src="images/icon/color_14.jpg" alt="검정" /></p>
+												<p>검정</p> -->
+											</div>
+										</div>
+										<div class="pop_detail">
+											<div class="detail_wrap">
+												<table class="detail_table_wrap">
+													<colgroup>
+														<col width="80"/>
+														<col width="451"/>
+													</colgroup>
+													<tbody>
+														<tr>
+															<th class="left_title"><div>문구</div></th>
+															<td class="right_detail">
+																<div class="detail_text">
+																	<p>해외여행 가세요? 직구 좋아하세요?</p>
+																	<p>KB국민카드가 해외이용 고객님께 드리는</p>
+																	<p>놀라운 혜택을 확인하세요!</p>
+																</div>
+																<div class="detail_text_limit">(1,345 Text)</div>
+																<div class="detail_view">
+																	<p class="detail_view_title">*자세히 보기</p>
+																	<p>PC - <a href="">https://goo.gl/985bqp</a></p>
+																	<p>모바일 - <a href="">https://goo.gl/4iwmMc</a></p>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<th class="left_title">제목</th>
+															<td class="right_detail">
+																<p>30년 장인의 손을 거친 특별함 59,000원~ </p>
+																<p class="text_info"><span class="detail_text_limit">(1,345 Text)</span></p>
+															</td>
+														</tr>
+														<tr>
+															<th class="left_title">링크설명</th>
+															<td class="right_detail">
+																<p>스트라이프는 괜찮은 셔츠의 기준이 높습니다.</p>
+																<p class="text_info"><span class="detail_text_limit">(1,345 Text)</span></p>
+															</td>
+														</tr>
+														<tr>
+															<th class="left_title">링크</th>
+															<td class="right_detail"><a href="">STRIPES.CO.KR</a></td>
+														</tr>
+														<tr>
+															<th class="left_title">행동유도</th>
+															<!-- a태그 삭제 -->
+															<td class="right_detail">지금 구매하기</td>
+															<!-- a태그 삭제 -->
+														</tr>
+														<tr>
+															<th class="left_title">해시태그</th>
+															<td class="right_detail">
+																<div class="hash_tag">
+																	<p><a href="">#활용도200점</a></p>
+																	<p><a href="">#쉽죠</a></p>
+																	<p><a href="">#남자는_셔츠</a></p>
+																	<p><a href="">#다양한_원단</a></p>
+																</div>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+										<div class="target_wrap">
+											<div class="target_title">추정 타겟팅 정보</div>
+											<div class="target_detail">
+												<table>
+													<colgroup>
+														<col width="80"/>
+														<col width="183"/>
+														<col width="80"/>
+														<col width="183"/>
+													</colgroup>
+													<tbody>
+														<tr>
+															<th><img src="images/icon/pop_right_men.jpg" alt="남자" /></th>
+															<td>
+																<div>
+																	<p>20-30세 (대한민국,&nbsp;서울)</p>
+																	<p>35-40세 (대한민국,&nbsp;경기도)</p>
+																</div>
+															</td>
+															<th><img src="images/icon/pop_right_girl.jpg" alt="여자" /></th>
+															<td>-</td>
+														</tr>
+													</tbody>
+												</table>
+												<p class="info_text">*페이스북 표본 집단을 토대로 추정한 정보이므로 100% 일치하지 않을 수도 있습니다.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--/////////////////////////////////////////////////////// 컨텐츠 상세 팝업 END ///////////////////////////////////////////////////////-->
+					</li>
+				</ul>
+				<ul>
+					<li class="contents_wrapper">
+						<div class="contents_title">
+							<p>KB국민카드</p>
+						</div>
+						<div class="main_contents">
+							<!-- 마스크-->
+							<div class="main_contents_mask"></div>
+							<!-- 마스크-->
+							<div class="cont_name_wrap">
+								<div class="cont_name">
+									<div><img src="images/icon/icon_bg.jpg" alt="" ></div>
+									<div>
+										<p>KB국민카드</p>
+										<p>Sponsored</p>
+									</div>
+								</div>
+								<!-- 좋아요 버튼 삭제 -->
+								<!-- <div class="cont_like_btn">페이지 좋아요</div> -->
+								<!-- // 좋아요 버튼 삭제 -->
+							</div>
+							<div class="cont_tag">
+								<p class="tag_text">여름이라 더우니까 시원~하게 한방 발급!</p>
+								<p class="tag_hash">#간편하고 #빠르게 #24시간_발급가능</p>
+							</div>
+							<div class="cont_main_tem_05">
+								<div class="cont_roll05_wrap">
+									<div class="roll_main_wrap">
+										<ul class="roll_main_wrapper">
+											<li class="roll_content">
+												<div>
+													<div class="pro_img"><img src="images/common/cont_main_img.jpg" alt="이미지"/></div>
+												</div>
+											</li>
+											<li class="roll_content">
+												<div>
+													<div class="pro_img"><img src="images/common/cont_main_img.jpg" alt="이미지"/></div>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="favorite_wrap">
+								<div><button><img src="images/icon/contents_img01.jpg" alt="" /></button><span>999,999</span></div>
+								<div><button><img src="images/icon/contents_img02.jpg" alt="" /></button><span>999,999</span></div>
+								<div><button><img src="images/icon/contents_img03.jpg" alt="" /></button><span>999,999</span></div>
+								<div><button><img src="images/icon/contents_img04.jpg" alt="" /></button><span>999,999</span></div>
+							</div>
+						</div>
+						<div class="contents_date">
+							<p>2017-08-16,&nbsp;10:00&nbsp;PM</p>
+						</div>
+						<!--/////////////////////////////////////////////////////// 컨텐츠 상세 팝업 START ///////////////////////////////////////////////////////-->
+						<div class="contents_pop">
+							<div class="pop_contents_wrap">
+								<div class="pop_title_wrap">
+									<div class="title_left">
+											<span class="page_name">페이지명</span>
+											<span class="cate_name">카테고리명</span>
+									</div>
+									<div class="title_right pop_close"><img src="images/icon/pop_close_btn.png" alt="" /></div>
+								</div>
+								<div class="pop_contents">
+									<div class="contents_left">
+										<div class="pop_inner_contents_tem_05">
+											<div class="pop_cont_name_wrap">
+												<div class="pop_cont_name">
+													<div><img src="images/icon/pop_icon_bg.jpg" alt="" ></div>
+													<div>
+														<p>KB국민카드</p>
+														<p>Sponsored</p>
+													</div>
+												</div>
+												<div class="pop_cont_like_btn">페이지 좋아요</div>
+											</div>
+											<div class="pop_cont_tag">
+												<p class="tag_text">여름이라 더우니까 시원~하게 한방 발급!</p>
+												<p class="tag_hash">#간편하고 #빠르게 #24시간_발급가능</p>
+											</div>
+											<div class="cont_roll05_wrap">
+												<div class="roll_main_wrap">
+													<ul class="roll_main_wrapper">
+														<li class="roll_content">
+															<div>
+																<div class="pro_img"><img src="images/common/cont_main_img.jpg" alt="이미지"/></div>
+															</div>
+														</li>
+														<li class="roll_content">
+															<div>
+																<div class="pro_img"><img src="images/common/cont_main_img.jpg" alt="이미지"/></div>
+															</div>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<div class="pop_favorite_wrap">
+												<div><span><img src="images/icon/pop_contents_img_01.png" alt="" /></span><span>999,999</span></div>
+												<div><span><img src="images/icon/pop_contents_img_02.png" alt="" /></span><span>999,999</span></div>
+												<div><span><img src="images/icon/pop_contents_img_03.png" alt="" /></span><span>999,999</span></div>
+												<div><span><img src="images/icon/pop_contents_img_04.png" alt="" /></span><span>999,999</span></div>
+											</div>
+										</div>
+										<div class="pop_contents_date">
+											<div class="left_date">2017-08-16,&nbsp;10:00&nbsp;PM</div>
+											<div class="right">
+												<p>PC원본보기</p>
+												<p>Mobile 원본 보기</p>
+												<p>원본보기</p>
+											</div>
+										</div>
+									</div>
+									<div class="contents_right">
+										<div class="right_icon_wrap">
+											<div>
+												<p><img src="images/icon/pop_right_icon_01.jpg" alt="컴퓨터" /></p>
+												<p>PC</p>
+											</div>
+											<div>
+												<p><img src="images/icon/pop_right_icon_02.jpg" alt="컴퓨터" /></p>
+												<p>MOBILE</p>
+											</div>
+											<div>
+												<p><img src="images/icon/form_icon_01.jpg" alt="단일동영상" /></p>
+												<p>단일 동영상</p>
+												<!-- <p><img src="images/icon/form_icon_02.jpg" alt="단일이미지" /></p>
+												<p>단일 이미지</p>
+												<p><img src="images/icon/form_icon_03.jpg" alt="슬라이드" /></p>
+												<p>슬라이드</p>
+												<p><img src="images/icon/form_icon_04.jpg" alt="슬라이드쇼" /></p>
+												<p>슬라이드 쇼</p>
+												<p><img src="images/icon/form_icon_05.jpg" alt="여러 이미지" /></p>
+												<p>여러 이미지</p> -->
+											</div>
+											<div>
+												<p><img src="images/icon/color_1.jpg" alt="전체" /></p>
+												<p>전체</p>
+												<!-- <p><img src="images/icon/color_2.jpg" alt="갈색" /></p>
+												<p>갈색</p>
+												<p><img src="images/icon/color_3.jpg" alt="빨강" /></p>
+												<p>빨강</p>
+												<p><img src="images/icon/color_4.jpg" alt="주황" /></p>
+												<p>주황</p>
+												<p><img src="images/icon/color_5.jpg" alt="노랑" /></p>
+												<p>노랑</p>
+												<p><img src="images/icon/color_6.jpg" alt="연두" /></p>
+												<p>연두</p>
+												<p><img src="images/icon/color_7.jpg" alt="초록" /></p>
+												<p>초록</p>
+												<p><img src="images/icon/color_8.jpg" alt="하늘" /></p>
+												<p>하늘</p>
+												<p><img src="images/icon/color_9.jpg" alt="파랑" /></p>
+												<p>파랑</p>
+												<p><img src="images/icon/color_10.jpg" alt="분홍" /></p>
+												<p>분홍</p>
+												<p><img src="images/icon/color_11.jpg" alt="보라" /></p>
+												<p>보라</p>
+												<p><img src="images/icon/white_color.jpg" alt="흰색" /></p>
+												<p>흰색</p>
+												<p><img src="images/icon/color_13.jpg" alt="회색" /></p>
+												<p>회색</p>
+												<p><img src="images/icon/color_14.jpg" alt="검정" /></p>
+												<p>검정</p> -->
+											</div>
+										</div>
+										<div class="pop_detail">
+											<div class="detail_wrap">
+												<table class="detail_table_wrap">
+													<colgroup>
+														<col width="80"/>
+														<col width="451"/>
+													</colgroup>
+													<tbody>
+														<tr>
+															<th class="left_title"><div>문구</div></th>
+															<td class="right_detail">
+																<div class="detail_text">
+																	<p>해외여행 가세요? 직구 좋아하세요?</p>
+																	<p>KB국민카드가 해외이용 고객님께 드리는</p>
+																	<p>놀라운 혜택을 확인하세요!</p>
+																</div>
+																<div class="detail_text_limit">(1,345 Text)</div>
+																<div class="detail_view">
+																	<p class="detail_view_title">*자세히 보기</p>
+																	<p>PC - <a href="">https://goo.gl/985bqp</a></p>
+																	<p>모바일 - <a href="">https://goo.gl/4iwmMc</a></p>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<th class="left_title">제목</th>
+															<td class="right_detail">
+																<p>30년 장인의 손을 거친 특별함 59,000원~ </p>
+																<p class="text_info"><span class="detail_text_limit">(1,345 Text)</span></p>
+															</td>
+														</tr>
+														<tr>
+															<th class="left_title">링크설명</th>
+															<td class="right_detail">
+																<p>스트라이프는 괜찮은 셔츠의 기준이 높습니다.</p>
+																<p class="text_info"><span class="detail_text_limit">(1,345 Text)</span></p>
+															</td>
+														</tr>
+														<tr>
+															<th class="left_title">링크</th>
+															<td class="right_detail"><a href="">STRIPES.CO.KR</a></td>
+														</tr>
+														<tr>
+															<th class="left_title">행동유도</th>
+															<!-- a태그 삭제 -->
+															<td class="right_detail">지금 구매하기</td>
+															<!-- a태그 삭제 -->
+														</tr>
+														<tr>
+															<th class="left_title">해시태그</th>
+															<td class="right_detail">
+																<div class="hash_tag">
+																	<p><a href="">#활용도200점</a></p>
+																	<p><a href="">#쉽죠</a></p>
+																	<p><a href="">#남자는_셔츠</a></p>
+																	<p><a href="">#다양한_원단</a></p>
+																</div>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+										<div class="target_wrap">
+											<div class="target_title">추정 타겟팅 정보</div>
+											<div class="target_detail">
+												<table>
+													<colgroup>
+														<col width="80"/>
+														<col width="183"/>
+														<col width="80"/>
+														<col width="183"/>
+													</colgroup>
+													<tbody>
+														<tr>
+															<th><img src="images/icon/pop_right_men.jpg" alt="남자" /></th>
+															<td>
+																<div>
+																	<p>20-30세 (대한민국,&nbsp;서울)</p>
+																	<p>35-40세 (대한민국,&nbsp;경기도)</p>
+																</div>
+															</td>
+															<th><img src="images/icon/pop_right_girl.jpg" alt="여자" /></th>
+															<td>-</td>
+														</tr>
+													</tbody>
+												</table>
+												<p class="info_text">*페이스북 표본 집단을 토대로 추정한 정보이므로 100% 일치하지 않을 수도 있습니다.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--/////////////////////////////////////////////////////// 컨텐츠 상세 팝업 END ///////////////////////////////////////////////////////-->
+					</li>
+					<li class="contents_wrapper">
+						<div class="contents_title">
+							<p>KB국민카드</p>
+						</div>
+						<div class="main_contents">
+							<!-- 마스크-->
+							<div class="main_contents_mask"></div>
+							<!-- 마스크-->
+							<div class="cont_name_wrap">
+								<div class="cont_name">
+									<div><img src="images/icon/icon_bg.jpg" alt="" ></div>
+									<div>
+										<p>KB국민카드</p>
+										<p>Sponsored</p>
+									</div>
+								</div>
+								<!-- 좋아요 버튼 삭제 -->
+								<!-- <div class="cont_like_btn">페이지 좋아요</div> -->
+								<!-- // 좋아요 버튼 삭제 -->
+							</div>
+							<div class="cont_tag">
+								<p class="tag_text">여름이라 더우니까 시원~하게 한방 발급!</p>
+								<p class="tag_hash">#간편하고 #빠르게 #24시간_발급가능</p>
+							</div>
+							<div class="cont_main_tem_06">
+								<div class="cont_roll05_wrap">
+									<div class="roll_main_wrap">
+										<ul class="roll_main_wrapper">
+											<li class="roll_content">
+												<div>
+													<div class="pro_img"><img src="images/common/cont_main_img.jpg" alt="이미지"/></div>
+												</div>
+												<div class="request_wrap">
+													<div class="">
+														<p class="title">KB국민카드</p>
+														<button>지금 신청하기</button>
+													</div>
+												</div>
+											</li>
+											<li class="roll_content">
+												<div>
+													<div class="video_wrap">
+														<div class="video_bg"></div>
+														<video width="117" height="117" controls >
+															<source src="https://scontent.xx.fbcdn.net/v/t42.1790-4/21601573_368278506940528_3908099920699064320_n.mp4?efg=eyJ2ZW5jb2RlX3RhZyI6InN2ZV9zZCJ9&oh=aef26738ab13ecfc45a192314d655f06&oe=59B7F3CC" type="video/mp4">
+															<source src="https://scontent.xx.fbcdn.net/v/t42.1790-4/21601573_368278506940528_3908099920699064320_n.mp4?efg=eyJ2ZW5jb2RlX3RhZyI6InN2ZV9zZCJ9&oh=aef26738ab13ecfc45a192314d655f06&oe=59B7F3CC" type="video/ogg">
+														</video>
+													</div>
+												</div>
+												<div class="request_wrap">
+													<div>
+														<p class="title">KB국민카드</p>
+														<button>지금 신청하기</button>
+													</div>
+												</div>
+											</li>
+											<li class="roll_content">
+												<div>
+													<div class="pro_img"><img src="images/common/cont_main_img.jpg" alt="이미지"/></div>
+												</div>
+												<div class="request_wrap">
+													<div class="">
+														<p class="title">KB국민카드</p>
+														<button>지금 신청하기</button>
+													</div>
+												</div>
+											</li>
+											<li class="roll_content">
+												<div>
+													<div class="video_wrap">
+														<div class="video_bg"></div>
+														<video width="117" height="117" controls>
+															<source src="https://scontent.xx.fbcdn.net/v/t42.1790-4/21601573_368278506940528_3908099920699064320_n.mp4?efg=eyJ2ZW5jb2RlX3RhZyI6InN2ZV9zZCJ9&oh=aef26738ab13ecfc45a192314d655f06&oe=59B7F3CC" type="video/mp4">
+															<source src="https://scontent.xx.fbcdn.net/v/t42.1790-4/21601573_368278506940528_3908099920699064320_n.mp4?efg=eyJ2ZW5jb2RlX3RhZyI6InN2ZV9zZCJ9&oh=aef26738ab13ecfc45a192314d655f06&oe=59B7F3CC" type="video/ogg">
+														</video>
+													</div>
+												</div>
+												<div class="request_wrap">
+													<div>
+														<p class="title">KB국민카드</p>
+														<button>지금 신청하기</button>
+													</div>
+												</div>
+											</li>
+											<li class="roll_content">
+												<div>
+													<div class="pro_img"><img src="images/common/cont_main_img.jpg" alt="이미지"/></div>
+												</div>
+												<div class="request_wrap">
+													<div class="">
+														<p class="title">KB국민카드</p>
+														<button>지금 신청하기</button>
+													</div>
+												</div>
+											</li>
+											<li class="roll_content">
+												<div>
+													<div class="video_wrap">
+														<div class="video_bg"></div>
+														<video width="117" height="117" controls>
+															<source src="https://scontent.xx.fbcdn.net/v/t42.1790-4/21601573_368278506940528_3908099920699064320_n.mp4?efg=eyJ2ZW5jb2RlX3RhZyI6InN2ZV9zZCJ9&oh=aef26738ab13ecfc45a192314d655f06&oe=59B7F3CC" type="video/mp4">
+															<source src="https://scontent.xx.fbcdn.net/v/t42.1790-4/21601573_368278506940528_3908099920699064320_n.mp4?efg=eyJ2ZW5jb2RlX3RhZyI6InN2ZV9zZCJ9&oh=aef26738ab13ecfc45a192314d655f06&oe=59B7F3CC" type="video/ogg">
+														</video>
+													</div>
+												</div>
+												<div class="request_wrap">
+													<div>
+														<p class="title">KB국민카드</p>
+														<button>지금 신청하기</button>
+													</div>
+												</div>
+											</li>
+											<li class="roll_content">
+												<div>
+													<div class="pro_img"><img src="images/common/cont_main_img.jpg" alt="이미지"/></div>
+												</div>
+												<div class="request_wrap">
+													<div class="">
+														<p class="title">KB국민카드</p>
+														<button>지금 신청하기</button>
+													</div>
+												</div>
+											</li>
+											<li class="roll_content">
+												<div>
+													<div class="video_wrap">
+														<div class="video_bg"></div>
+														<video width="117" height="117" controls>
+															<source src="https://scontent.xx.fbcdn.net/v/t42.1790-4/21601573_368278506940528_3908099920699064320_n.mp4?efg=eyJ2ZW5jb2RlX3RhZyI6InN2ZV9zZCJ9&oh=aef26738ab13ecfc45a192314d655f06&oe=59B7F3CC" type="video/mp4">
+															<source src="https://scontent.xx.fbcdn.net/v/t42.1790-4/21601573_368278506940528_3908099920699064320_n.mp4?efg=eyJ2ZW5jb2RlX3RhZyI6InN2ZV9zZCJ9&oh=aef26738ab13ecfc45a192314d655f06&oe=59B7F3CC" type="video/ogg">
+														</video>
+													</div>
+												</div>
+												<div class="request_wrap">
+													<div>
+														<p class="title">KB국민카드</p>
+														<button>지금 신청하기</button>
+													</div>
+												</div>
+											</li>
+											<li class="roll_content">
+												<div>
+													<div class="pro_img"><img src="images/common/cont_main_img.jpg" alt="이미지"/></div>
+												</div>
+												<div class="request_wrap">
+													<div class="">
+														<p class="title">KB국민카드</p>
+														<button>지금 신청하기</button>
+													</div>
+												</div>
+											</li>
+											<li class="roll_content">
+												<div>
+													<div class="video_wrap">
+														<div class="video_bg"></div>
+														<video width="117" height="117" controls>
+															<source src="https://scontent.xx.fbcdn.net/v/t42.1790-4/21601573_368278506940528_3908099920699064320_n.mp4?efg=eyJ2ZW5jb2RlX3RhZyI6InN2ZV9zZCJ9&oh=aef26738ab13ecfc45a192314d655f06&oe=59B7F3CC" type="video/mp4">
+															<source src="https://scontent.xx.fbcdn.net/v/t42.1790-4/21601573_368278506940528_3908099920699064320_n.mp4?efg=eyJ2ZW5jb2RlX3RhZyI6InN2ZV9zZCJ9&oh=aef26738ab13ecfc45a192314d655f06&oe=59B7F3CC" type="video/ogg">
+														</video>
+													</div>
+												</div>
+												<div class="request_wrap">
+													<div>
+														<p class="title">KB국민카드</p>
+														<button>지금 신청하기</button>
+													</div>
+												</div>
+											</li>
+											<li class="roll_content">
+												<div>
+													<div class="pro_img"><img src="images/common/cont_main_img.jpg" alt="이미지"/></div>
+												</div>
+												<div class="request_wrap">
+													<div class="">
+														<p class="title">KB국민카드</p>
+														<button>지금 신청하기</button>
+													</div>
+												</div>
+											</li>
+											<li class="roll_content">
+												<div>
+													<div class="video_wrap">
+														<div class="video_bg"></div>
+														<video width="117" height="117" controls>
+															<source src="https://scontent.xx.fbcdn.net/v/t42.1790-4/21601573_368278506940528_3908099920699064320_n.mp4?efg=eyJ2ZW5jb2RlX3RhZyI6InN2ZV9zZCJ9&oh=aef26738ab13ecfc45a192314d655f06&oe=59B7F3CC" type="video/mp4">
+															<source src="https://scontent.xx.fbcdn.net/v/t42.1790-4/21601573_368278506940528_3908099920699064320_n.mp4?efg=eyJ2ZW5jb2RlX3RhZyI6InN2ZV9zZCJ9&oh=aef26738ab13ecfc45a192314d655f06&oe=59B7F3CC" type="video/ogg">
+														</video>
+													</div>
+												</div>
+												<div class="request_wrap">
+													<div>
+														<p class="title">KB국민카드</p>
+														<button>지금 신청하기</button>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="favorite_wrap">
+								<div><button><img src="images/icon/contents_img01.jpg" alt="" /></button><span>999,999</span></div>
+								<div><button><img src="images/icon/contents_img02.jpg" alt="" /></button><span>999,999</span></div>
+								<div><button><img src="images/icon/contents_img03.jpg" alt="" /></button><span>999,999</span></div>
+								<div><button><img src="images/icon/contents_img04.jpg" alt="" /></button><span>999,999</span></div>
+							</div>
+						</div>
+						<div class="contents_date">
+							<p>2017-08-16,&nbsp;10:00&nbsp;PM</p>
+						</div>
+						<!--/////////////////////////////////////////////////////// 컨텐츠 상세 팝업 START ///////////////////////////////////////////////////////-->
+						<div class="contents_pop">
+							<div class="pop_contents_wrap">
+								<div class="pop_title_wrap">
+									<div class="title_left">
+											<span class="page_name">페이지명</span>
+											<span class="cate_name">카테고리명</span>
+									</div>
+									<div class="title_right pop_close"><img src="images/icon/pop_close_btn.png" alt="" /></div>
+								</div>
+								<div class="pop_contents">
+									<div class="contents_left">
+										<div class="pop_inner_contents_tem_06">
+											<div class="pop_cont_name_wrap">
+												<div class="pop_cont_name">
+													<div><img src="images/icon/pop_icon_bg.jpg" alt="" ></div>
+													<div>
+														<p>KB국민카드</p>
+														<p>Sponsored</p>
+													</div>
+												</div>
+												<div class="pop_cont_like_btn">페이지 좋아요</div>
+											</div>
+											<div class="pop_cont_tag">
+												<p class="tag_text">여름이라 더우니까 시원~하게 한방 발급!</p>
+												<p class="tag_hash">#간편하고 #빠르게 #24시간_발급가능</p>
+											</div>
+											<div class="cont_main_tem_06">
+												<div class="cont_roll05_wrap">
+													<div class="roll_main_wrap">
+														<ul class="roll_main_wrapper">
+															<li class="roll_content">
+																<div>
+																	<div class="pro_img"><img src="images/common/cont_main_img.jpg" alt="이미지"/></div>
+																</div>
+																<div class="request_wrap">
+																	<div class="">
+																		<p class="title">KB국민카드</p>
+																		<button>지금 신청하기</button>
+																	</div>
+																</div>
+															</li>
+															<li class="roll_content">
+																<div>
+																	<div class="video_wrap">
+																		<div class="video_bg"></div>
+																		<video width="100%" height="291" controls alt="재생버튼">
+																			<source src="https://scontent.xx.fbcdn.net/v/t42.1790-4/21601573_368278506940528_3908099920699064320_n.mp4?efg=eyJ2ZW5jb2RlX3RhZyI6InN2ZV9zZCJ9&oh=aef26738ab13ecfc45a192314d655f06&oe=59B7F3CC" type="video/mp4">
+																			<source src="https://scontent.xx.fbcdn.net/v/t42.1790-4/21601573_368278506940528_3908099920699064320_n.mp4?efg=eyJ2ZW5jb2RlX3RhZyI6InN2ZV9zZCJ9&oh=aef26738ab13ecfc45a192314d655f06&oe=59B7F3CC" type="video/ogg">
+																		</video>
+																	</div>
+																</div>
+																<div class="request_wrap">
+																	<div>
+																		<p class="title">KB국민카드</p>
+																		<button>지금 신청하기</button>
+																	</div>
+																</div>
+															</li>
+															<li class="roll_content">
+																<div>
+																	<div class="pro_img"><img src="images/common/cont_main_img.jpg" alt="이미지"/></div>
+																</div>
+																<div class="request_wrap">
+																	<div class="">
+																		<p class="title">KB국민카드</p>
+																		<button>지금 신청하기</button>
+																	</div>
+																</div>
+															</li>
+															<li class="roll_content">
+																<div>
+																	<div class="video_wrap">
+																		<div class="video_bg"></div>
+																		<video width="100%" height="291" controls alt="재생버튼">
+																			<source src="https://scontent.xx.fbcdn.net/v/t42.1790-4/21601573_368278506940528_3908099920699064320_n.mp4?efg=eyJ2ZW5jb2RlX3RhZyI6InN2ZV9zZCJ9&oh=aef26738ab13ecfc45a192314d655f06&oe=59B7F3CC" type="video/mp4">
+																			<source src="https://scontent.xx.fbcdn.net/v/t42.1790-4/21601573_368278506940528_3908099920699064320_n.mp4?efg=eyJ2ZW5jb2RlX3RhZyI6InN2ZV9zZCJ9&oh=aef26738ab13ecfc45a192314d655f06&oe=59B7F3CC" type="video/ogg">
+																		</video>
+																	</div>
+																</div>
+																<div class="request_wrap">
+																	<div>
+																		<p class="title">KB국민카드</p>
+																		<button>지금 신청하기</button>
+																	</div>
+																</div>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="pop_favorite_wrap">
+												<div><span><img src="images/icon/pop_contents_img_01.png" alt="" /></span><span>999,999</span></div>
+												<div><span><img src="images/icon/pop_contents_img_02.png" alt="" /></span><span>999,999</span></div>
+												<div><span><img src="images/icon/pop_contents_img_03.png" alt="" /></span><span>999,999</span></div>
+												<div><span><img src="images/icon/pop_contents_img_04.png" alt="" /></span><span>999,999</span></div>
+											</div>
+										</div>
+										<div class="pop_contents_date">
+											<div class="left_date">2017-08-16,&nbsp;10:00&nbsp;PM</div>
+											<div class="right">
+												<p>PC원본보기</p>
+												<p>Mobile 원본 보기</p>
+												<p>원본보기</p>
+											</div>
+										</div>
+										<div class="video_info_text">*&nbsp;광고가 종료되었거나 광고 소재 링크가 갱신된 경우, 광고 소재가 노출되지 않거나 "원본보기"가 불가능합니다.</div>
+									</div>
+									<div class="contents_right">
+										<div class="right_icon_wrap">
+											<div>
+												<p><img src="images/icon/pop_right_icon_01.jpg" alt="컴퓨터" /></p>
+												<p>PC</p>
+											</div>
+											<div>
+												<p><img src="images/icon/form_icon_01.jpg" alt="단일동영상" /></p>
+												<p>단일 동영상</p>
+												<!-- <p><img src="images/icon/form_icon_02.jpg" alt="단일이미지" /></p>
+												<p>단일 이미지</p>
+												<p><img src="images/icon/form_icon_03.jpg" alt="슬라이드" /></p>
+												<p>슬라이드</p>
+												<p><img src="images/icon/form_icon_04.jpg" alt="슬라이드쇼" /></p>
+												<p>슬라이드 쇼</p>
+												<p><img src="images/icon/form_icon_05.jpg" alt="여러 이미지" /></p>
+												<p>여러 이미지</p> -->
+											</div>
+											<div>
+												<p><img src="images/icon/color_1.jpg" alt="전체" /></p>
+												<p>전체</p>
+												<!-- <p><img src="images/icon/color_2.jpg" alt="갈색" /></p>
+												<p>갈색</p>
+												<p><img src="images/icon/color_3.jpg" alt="빨강" /></p>
+												<p>빨강</p>
+												<p><img src="images/icon/color_4.jpg" alt="주황" /></p>
+												<p>주황</p>
+												<p><img src="images/icon/color_5.jpg" alt="노랑" /></p>
+												<p>노랑</p>
+												<p><img src="images/icon/color_6.jpg" alt="연두" /></p>
+												<p>연두</p>
+												<p><img src="images/icon/color_7.jpg" alt="초록" /></p>
+												<p>초록</p>
+												<p><img src="images/icon/color_8.jpg" alt="하늘" /></p>
+												<p>하늘</p>
+												<p><img src="images/icon/color_9.jpg" alt="파랑" /></p>
+												<p>파랑</p>
+												<p><img src="images/icon/color_10.jpg" alt="분홍" /></p>
+												<p>분홍</p>
+												<p><img src="images/icon/color_11.jpg" alt="보라" /></p>
+												<p>보라</p>
+												<p><img src="images/icon/white_color.jpg" alt="흰색" /></p>
+												<p>흰색</p>
+												<p><img src="images/icon/color_13.jpg" alt="회색" /></p>
+												<p>회색</p>
+												<p><img src="images/icon/color_14.jpg" alt="검정" /></p>
+												<p>검정</p> -->
+											</div>
+										</div>
+										<div class="pop_detail">
+											<div class="detail_wrap">
+												<table class="detail_table_wrap">
+													<colgroup>
+														<col width="80"/>
+														<col width="451"/>
+													</colgroup>
+													<tbody>
+														<tr>
+															<th class="left_title"><div>문구</div></th>
+															<td class="right_detail">
+																<div class="detail_text">
+																	<p>해외여행 가세요? 직구 좋아하세요?</p>
+																	<p>KB국민카드가 해외이용 고객님께 드리는</p>
+																	<p>놀라운 혜택을 확인하세요!</p>
+																</div>
+																<div class="detail_text_limit">(1,345 Text)</div>
+																<div class="detail_view">
+																	<p class="detail_view_title">*자세히 보기</p>
+																	<p>PC - <a href="">https://goo.gl/985bqp</a></p>
+																	<p>모바일 - <a href="">https://goo.gl/4iwmMc</a></p>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<th class="left_title">제목</th>
+															<td class="right_detail">
+																<p>30년 장인의 손을 거친 특별함 59,000원~ </p>
+																<p class="text_info"><span class="detail_text_limit">(1,345 Text)</span></p>
+															</td>
+														</tr>
+														<tr>
+															<th class="left_title">링크설명</th>
+															<td class="right_detail">
+																<p>스트라이프는 괜찮은 셔츠의 기준이 높습니다.</p>
+																<p class="text_info"><span class="detail_text_limit">(1,345 Text)</span></p>
+															</td>
+														</tr>
+														<tr>
+															<th class="left_title">링크</th>
+															<td class="right_detail"><a href="">STRIPES.CO.KR</a></td>
+														</tr>
+														<tr>
+															<th class="left_title">행동유도</th>
+															<!-- a태그 삭제 -->
+															<td class="right_detail">지금 구매하기</td>
+															<!-- a태그 삭제 -->
+														</tr>
+														<tr>
+															<th class="left_title">해시태그</th>
+															<td class="right_detail">
+																<div class="hash_tag">
+																	<p><a href="">#활용도200점</a></p>
+																	<p><a href="">#쉽죠</a></p>
+																	<p><a href="">#남자는_셔츠</a></p>
+																	<p><a href="">#다양한_원단</a></p>
+																</div>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+										<div class="target_wrap">
+											<div class="target_title">추정 타겟팅 정보</div>
+											<div class="target_detail">
+												<table>
+													<colgroup>
+														<col width="80"/>
+														<col width="183"/>
+														<col width="80"/>
+														<col width="183"/>
+													</colgroup>
+													<tbody>
+														<tr>
+															<th><img src="images/icon/pop_right_men.jpg" alt="남자" /></th>
+															<td>
+																<div>
+																	<p>20-30세 (대한민국,&nbsp;서울)</p>
+																	<p>35-40세 (대한민국,&nbsp;경기도)</p>
+																</div>
+															</td>
+															<th><img src="images/icon/pop_right_girl.jpg" alt="여자" /></th>
+															<td>-</td>
+														</tr>
+													</tbody>
+												</table>
+												<p class="info_text">*페이스북 표본 집단을 토대로 추정한 정보이므로 100% 일치하지 않을 수도 있습니다.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--/////////////////////////////////////////////////////// 컨텐츠 상세 팝업 END ///////////////////////////////////////////////////////-->
+					</li>
+					<li class="contents_wrapper">
+						<div class="contents_title">
+							<p>KB국민카드</p>
+						</div>
+						<div class="main_contents">
+							<!-- 마스크-->
+							<div class="main_contents_mask"></div>
+							<!-- 마스크-->
+							<div class="cont_name_wrap">
+								<div class="cont_name">
+									<div><img src="images/icon/icon_bg.jpg" alt="" ></div>
+									<div>
+										<p>KB국민카드</p>
+										<p>Sponsored</p>
+									</div>
+								</div>
+								<!-- 좋아요 버튼 삭제 -->
+								<!-- <div class="cont_like_btn">페이지 좋아요</div> -->
+								<!-- // 좋아요 버튼 삭제 -->							</div>
+							<div class="cont_tag">
+								<p class="tag_text">여름이라 더우니까 시원~하게 한방 발급!</p>
+								<p class="tag_hash">#간편하고 #빠르게 #24시간_발급가능</p>
+							</div>
+							<div class="cont_main_tem_07">
+								<div class="video_wrap">
+									<div class="video_bg"></div>
+									<video width="225" controls alt="재생버튼">
+										<source src="https://scontent.xx.fbcdn.net/v/t42.1790-4/21601573_368278506940528_3908099920699064320_n.mp4?efg=eyJ2ZW5jb2RlX3RhZyI6InN2ZV9zZCJ9&oh=aef26738ab13ecfc45a192314d655f06&oe=59B7F3CC" type="video/mp4">
+										<source src="https://scontent.xx.fbcdn.net/v/t42.1790-4/21601573_368278506940528_3908099920699064320_n.mp4?efg=eyJ2ZW5jb2RlX3RhZyI6InN2ZV9zZCJ9&oh=aef26738ab13ecfc45a192314d655f06&oe=59B7F3CC" type="video/ogg">
+									</video>
+								</div>
+							</div>
+							<div class="favorite_wrap">
+								<div><button><img src="images/icon/contents_img01.jpg" alt="" /></button><span>999,999</span></div>
+								<div><button><img src="images/icon/contents_img02.jpg" alt="" /></button><span>999,999</span></div>
+								<div><button><img src="images/icon/contents_img03.jpg" alt="" /></button><span>999,999</span></div>
+								<div><button><img src="images/icon/contents_img04.jpg" alt="" /></button><span>999,999</span></div>
+							</div>
+						</div>
+						<div class="contents_date">
+							<p>2017-08-16,&nbsp;10:00&nbsp;PM</p>
+						</div>
+						<!--/////////////////////////////////////////////////////// 컨텐츠 상세 팝업 START ///////////////////////////////////////////////////////-->
+						<div class="contents_pop">
+							<div class="pop_contents_wrap">
+								<div class="pop_title_wrap">
+									<div class="title_left">
+											<span class="page_name">페이지명</span>
+											<span class="cate_name">카테고리명</span>
+									</div>
+									<div class="title_right pop_close"><img src="images/icon/pop_close_btn.png" alt="" /></div>
+								</div>
+								<div class="pop_contents">
+									<div class="contents_left">
+										<div class="pop_inner_contents_tem_07">
+											<div class="pop_cont_name_wrap">
+												<div class="pop_cont_name">
+													<div><img src="images/icon/pop_icon_bg.jpg" alt="" ></div>
+													<div>
+														<p>KB국민카드</p>
+														<p>Sponsored</p>
+													</div>
+												</div>
+												<div class="pop_cont_like_btn">페이지 좋아요</div>
+											</div>
+											<div class="pop_cont_tag">
+												<p class="tag_text">여름이라 더우니까 시원~하게 한방 발급!</p>
+												<p class="tag_hash">#간편하고 #빠르게 #24시간_발급가능</p>
+											</div>
+											<div class="video_wrap">
+												<div class="video_bg"></div>
+												<video width="100%" controls alt="재생버튼" id="video_source">
+													<source src="https://scontent.xx.fbcdn.net/v/t42.1790-4/21601573_368278506940528_3908099920699064320_n.mp4?efg=eyJ2ZW5jb2RlX3RhZyI6InN2ZV9zZCJ9&oh=aef26738ab13ecfc45a192314d655f06&oe=59B7F3CC" type="video/mp4">
+													<source src="https://scontent.xx.fbcdn.net/v/t42.1790-4/21601573_368278506940528_3908099920699064320_n.mp4?efg=eyJ2ZW5jb2RlX3RhZyI6InN2ZV9zZCJ9&oh=aef26738ab13ecfc45a192314d655f06&oe=59B7F3CC" type="video/ogg">
+												</video>
+											</div>
+											<div class="pop_favorite_wrap">
+												<div><span><img src="images/icon/pop_contents_img_01.png" alt="" /></span><span>999,999</span></div>
+												<div><span><img src="images/icon/pop_contents_img_02.png" alt="" /></span><span>999,999</span></div>
+												<div><span><img src="images/icon/pop_contents_img_03.png" alt="" /></span><span>999,999</span></div>
+												<div><span><img src="images/icon/pop_contents_img_04.png" alt="" /></span><span>999,999</span></div>
+											</div>
+										</div>
+										<div class="pop_contents_date">
+											<div class="left_date">2017-08-16,&nbsp;10:00&nbsp;PM</div>
+											<div class="right">
+												<p><a href="" target="_blank">PC원본보기</a></p>
+												<p><a href="" target="_blank">Mobile 원본 보기</a></p>
+												<p><a href="" target="_blank">원본보기</a></p>
+											</div>
+										</div>
+										<div class="video_info_text">*&nbsp;광고가 종료되었거나 광고 소재 링크가 갱신된 경우, 광고 소재가 노출되지 않거나 "원본보기"가 불가능합니다.</div>
+									</div>
+									<div class="contents_right">
+										<div class="right_icon_wrap">
+											<div>
+												<p><img src="images/icon/pop_right_icon_01.jpg" alt="컴퓨터" /></p>
+												<p>PC</p>
+											</div>
+											<div>
+												<p><img src="images/icon/form_icon_01.jpg" alt="단일동영상" /></p>
+												<p>단일 동영상</p>
+												<!-- <p><img src="images/icon/form_icon_02.jpg" alt="단일이미지" /></p>
+												<p>단일 이미지</p>
+												<p><img src="images/icon/form_icon_03.jpg" alt="슬라이드" /></p>
+												<p>슬라이드</p>
+												<p><img src="images/icon/form_icon_04.jpg" alt="슬라이드쇼" /></p>
+												<p>슬라이드 쇼</p>
+												<p><img src="images/icon/form_icon_05.jpg" alt="여러 이미지" /></p>
+												<p>여러 이미지</p> -->
+											</div>
+											<div>
+												<p><img src="images/icon/color_1.jpg" alt="전체" /></p>
+												<p>전체</p>
+												<!-- <p><img src="images/icon/color_2.jpg" alt="갈색" /></p>
+												<p>갈색</p>
+												<p><img src="images/icon/color_3.jpg" alt="빨강" /></p>
+												<p>빨강</p>
+												<p><img src="images/icon/color_4.jpg" alt="주황" /></p>
+												<p>주황</p>
+												<p><img src="images/icon/color_5.jpg" alt="노랑" /></p>
+												<p>노랑</p>
+												<p><img src="images/icon/color_6.jpg" alt="연두" /></p>
+												<p>연두</p>
+												<p><img src="images/icon/color_7.jpg" alt="초록" /></p>
+												<p>초록</p>
+												<p><img src="images/icon/color_8.jpg" alt="하늘" /></p>
+												<p>하늘</p>
+												<p><img src="images/icon/color_9.jpg" alt="파랑" /></p>
+												<p>파랑</p>
+												<p><img src="images/icon/color_10.jpg" alt="분홍" /></p>
+												<p>분홍</p>
+												<p><img src="images/icon/color_11.jpg" alt="보라" /></p>
+												<p>보라</p>
+												<p><img src="images/icon/white_color.jpg" alt="흰색" /></p>
+												<p>흰색</p>
+												<p><img src="images/icon/color_13.jpg" alt="회색" /></p>
+												<p>회색</p>
+												<p><img src="images/icon/color_14.jpg" alt="검정" /></p>
+												<p>검정</p> -->
+											</div>
+										</div>
+										<div class="pop_detail">
+											<div class="detail_wrap">
+												<table class="detail_table_wrap">
+													<colgroup>
+														<col width="80"/>
+														<col width="451"/>
+													</colgroup>
+													<tbody>
+														<tr>
+															<th class="left_title"><div>문구</div></th>
+															<td class="right_detail">
+																<div class="detail_text">
+																	<p>해외여행 가세요? 직구 좋아하세요?</p>
+																	<p>KB국민카드가 해외이용 고객님께 드리는</p>
+																	<p>놀라운 혜택을 확인하세요!</p>
+																</div>
+																<div class="detail_text_limit">(1,345 Text)</div>
+																<div class="detail_view">
+																	<p class="detail_view_title">*자세히 보기</p>
+																	<p>PC - <a href="">https://goo.gl/985bqp</a></p>
+																	<p>모바일 - <a href="">https://goo.gl/4iwmMc</a></p>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<th class="left_title">제목</th>
+															<td class="right_detail">
+																<p>30년 장인의 손을 거친 특별함 59,000원~ </p>
+																<p class="text_info"><span class="detail_text_limit">(1,345 Text)</span></p>
+															</td>
+														</tr>
+														<tr>
+															<th class="left_title">링크설명</th>
+															<td class="right_detail">
+																<p>스트라이프는 괜찮은 셔츠의 기준이 높습니다.</p>
+																<p class="text_info"><span class="detail_text_limit">(1,345 Text)</span></p>
+															</td>
+														</tr>
+														<tr>
+															<th class="left_title">링크</th>
+															<td class="right_detail"><a href="">STRIPES.CO.KR</a></td>
+														</tr>
+														<tr>
+															<th class="left_title">행동유도</th>
+															<!-- a태그 삭제 -->
+															<td class="right_detail">지금 구매하기</td>
+															<!-- a태그 삭제 -->
+														</tr>
+														<tr>
+															<th class="left_title">해시태그</th>
+															<td class="right_detail">
+																<div class="hash_tag">
+																	<p><a href="">#활용도200점</a></p>
+																	<p><a href="">#쉽죠</a></p>
+																	<p><a href="">#남자는_셔츠</a></p>
+																	<p><a href="">#다양한_원단</a></p>
+																</div>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+										<div class="target_wrap">
+											<div class="target_title">추정 타겟팅 정보</div>
+											<div class="target_detail">
+												<table>
+													<colgroup>
+														<col width="80"/>
+														<col width="183"/>
+														<col width="80"/>
+														<col width="183"/>
+													</colgroup>
+													<tbody>
+														<tr>
+															<th><img src="images/icon/pop_right_men.jpg" alt="남자" /></th>
+															<td>
+																<div>
+																	<p>20-30세 (대한민국,&nbsp;서울)</p>
+																	<p>35-40세 (대한민국,&nbsp;경기도)</p>
+																</div>
+															</td>
+															<th><img src="images/icon/pop_right_girl.jpg" alt="여자" /></th>
+															<td>-</td>
+														</tr>
+													</tbody>
+												</table>
+												<p class="info_text">*페이스북 표본 집단을 토대로 추정한 정보이므로 100% 일치하지 않을 수도 있습니다.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--/////////////////////////////////////////////////////// 컨텐츠 상세 팝업 END ///////////////////////////////////////////////////////-->
+					</li>
+					<!-- 템플릿 추가 2017-09-14-->
+					<li class="contents_wrapper">
+						<div class="contents_title">
+							<p>KB국민카드</p>
+						</div>
+						<div class="main_contents">
+							<!-- 마스크-->
+							<div class="main_contents_mask"></div>
+							<!-- 마스크-->
+							<div class="cont_name_wrap">
+								<div class="cont_name">
+									<div><img src="images/icon/icon_bg.jpg" alt="" ></div>
+									<div>
+										<p>KB국민카드</p>
+										<p>Sponsored</p>
+									</div>
+								</div>
+								<!-- 좋아요 버튼 삭제 -->
+								<!-- <div class="cont_like_btn">페이지 좋아요</div> -->
+								<!-- // 좋아요 버튼 삭제 -->							</div>
+							<div class="cont_tag">
+								<p class="tag_text">여름이라 더우니까 시원~하게 한방 발급!</p>
+								<p class="tag_hash">#간편하고 #빠르게 #24시간_발급가능</p>
+							</div>
+							<div class="cont_main_tem_08">
+								<div class="main_img">
+									<div><img src="images/common/cont_main_img.jpg" alt="" /></div>
+									<div><img src="images/common/cont_main_img.jpg" alt="" /></div>
+								</div>
+							</div>
+							<div class="favorite_wrap">
+								<div><button><img src="images/icon/contents_img01.jpg" alt="" /></button><span>999,999</span></div>
+								<div><button><img src="images/icon/contents_img02.jpg" alt="" /></button><span>999,999</span></div>
+								<div><button><img src="images/icon/contents_img03.jpg" alt="" /></button><span>999,999</span></div>
+								<div><button><img src="images/icon/contents_img04.jpg" alt="" /></button><span>999,999</span></div>
+							</div>
+						</div>
+						<div class="contents_date">
+							<p>2017-08-16,&nbsp;10:00&nbsp;PM</p>
+						</div>
+						<!--/////////////////////////////////////////////////////// 컨텐츠 상세 팝업 START ///////////////////////////////////////////////////////-->
+						<div class="contents_pop">
+							<div class="pop_contents_wrap">
+								<div class="pop_title_wrap">
+									<div class="title_left">
+											<span class="page_name">페이지명</span>
+											<span class="cate_name">카테고리명</span>
+									</div>
+									<div class="title_right pop_close"><img src="images/icon/pop_close_btn.png" alt="" /></div>
+								</div>
+								<div class="pop_contents">
+									<div class="contents_left">
+										<div class="pop_inner_contents_tem_08">
+											<div class="pop_cont_name_wrap">
+												<div class="pop_cont_name">
+													<div><img src="images/icon/pop_icon_bg.jpg" alt="" ></div>
+													<div>
+														<p>KB국민카드</p>
+														<p>Sponsored</p>
+													</div>
+												</div>
+												<div class="pop_cont_like_btn">페이지 좋아요</div>
+											</div>
+											<div class="pop_cont_tag">
+												<p class="tag_text">여름이라 더우니까 시원~하게 한방 발급!</p>
+												<p class="tag_hash">#간편하고 #빠르게 #24시간_발급가능</p>
+											</div>
+											<div class="main_img">
+												<div><img src="images/common/cont_main_img.jpg" alt="" /></div>
+												<div><img src="images/common/cont_main_img.jpg" alt="" /></div>
+											</div>
+											<div class="pop_favorite_wrap">
+												<div><span><img src="images/icon/pop_contents_img_01.png" alt="" /></span><span>999,999</span></div>
+												<div><span><img src="images/icon/pop_contents_img_02.png" alt="" /></span><span>999,999</span></div>
+												<div><span><img src="images/icon/pop_contents_img_03.png" alt="" /></span><span>999,999</span></div>
+												<div><span><img src="images/icon/pop_contents_img_04.png" alt="" /></span><span>999,999</span></div>
+											</div>
+										</div>
+										<div class="pop_contents_date">
+											<div class="left_date">2017-08-16,&nbsp;10:00&nbsp;PM</div>
+											<div class="right">
+												<p><a href="" target="_blank">PC원본보기</a></p>
+												<p><a href="" target="_blank">Mobile 원본 보기</a></p>
+												<p><a href="" target="_blank">원본보기</a></p>
+											</div>
+										</div>
+									</div>
+									<div class="contents_right">
+										<div class="right_icon_wrap">
+											<div>
+												<p><img src="images/icon/pop_right_icon_01.jpg" alt="컴퓨터" /></p>
+												<p>PC</p>
+											</div>
+											<div>
+												<p><img src="images/icon/form_icon_01.jpg" alt="단일동영상" /></p>
+												<p>단일 동영상</p>
+												<!-- <p><img src="images/icon/form_icon_02.jpg" alt="단일이미지" /></p>
+												<p>단일 이미지</p>
+												<p><img src="images/icon/form_icon_03.jpg" alt="슬라이드" /></p>
+												<p>슬라이드</p>
+												<p><img src="images/icon/form_icon_04.jpg" alt="슬라이드쇼" /></p>
+												<p>슬라이드 쇼</p>
+												<p><img src="images/icon/form_icon_05.jpg" alt="여러 이미지" /></p>
+												<p>여러 이미지</p> -->
+											</div>
+											<div>
+												<p><img src="images/icon/color_1.jpg" alt="전체" /></p>
+												<p>전체</p>
+												<!-- <p><img src="images/icon/color_2.jpg" alt="갈색" /></p>
+												<p>갈색</p>
+												<p><img src="images/icon/color_3.jpg" alt="빨강" /></p>
+												<p>빨강</p>
+												<p><img src="images/icon/color_4.jpg" alt="주황" /></p>
+												<p>주황</p>
+												<p><img src="images/icon/color_5.jpg" alt="노랑" /></p>
+												<p>노랑</p>
+												<p><img src="images/icon/color_6.jpg" alt="연두" /></p>
+												<p>연두</p>
+												<p><img src="images/icon/color_7.jpg" alt="초록" /></p>
+												<p>초록</p>
+												<p><img src="images/icon/color_8.jpg" alt="하늘" /></p>
+												<p>하늘</p>
+												<p><img src="images/icon/color_9.jpg" alt="파랑" /></p>
+												<p>파랑</p>
+												<p><img src="images/icon/color_10.jpg" alt="분홍" /></p>
+												<p>분홍</p>
+												<p><img src="images/icon/color_11.jpg" alt="보라" /></p>
+												<p>보라</p>
+												<p><img src="images/icon/white_color.jpg" alt="흰색" /></p>
+												<p>흰색</p>
+												<p><img src="images/icon/color_13.jpg" alt="회색" /></p>
+												<p>회색</p>
+												<p><img src="images/icon/color_14.jpg" alt="검정" /></p>
+												<p>검정</p> -->
+											</div>
+										</div>
+										<div class="pop_detail">
+											<div class="detail_wrap">
+												<table class="detail_table_wrap">
+													<colgroup>
+														<col width="80"/>
+														<col width="451"/>
+													</colgroup>
+													<tbody>
+														<tr>
+															<th class="left_title"><div>문구</div></th>
+															<td class="right_detail">
+																<div class="detail_text">
+																	<p>해외여행 가세요? 직구 좋아하세요?</p>
+																	<p>KB국민카드가 해외이용 고객님께 드리는</p>
+																	<p>놀라운 혜택을 확인하세요!</p>
+																</div>
+																<div class="detail_text_limit">(1,345 Text)</div>
+																<div class="detail_view">
+																	<p class="detail_view_title">*자세히 보기</p>
+																	<p>PC - <a href="">https://goo.gl/985bqp</a></p>
+																	<p>모바일 - <a href="">https://goo.gl/4iwmMc</a></p>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<th class="left_title">제목</th>
+															<td class="right_detail">
+																<p>30년 장인의 손을 거친 특별함 59,000원~ </p>
+																<p class="text_info"><span class="detail_text_limit">(1,345 Text)</span></p>
+															</td>
+														</tr>
+														<tr>
+															<th class="left_title">링크설명</th>
+															<td class="right_detail">
+																<p>스트라이프는 괜찮은 셔츠의 기준이 높습니다.</p>
+																<p class="text_info"><span class="detail_text_limit">(1,345 Text)</span></p>
+															</td>
+														</tr>
+														<tr>
+															<th class="left_title">링크</th>
+															<td class="right_detail"><a href="">STRIPES.CO.KR</a></td>
+														</tr>
+														<tr>
+															<th class="left_title">행동유도</th>
+															<!-- a태그 삭제 -->
+															<td class="right_detail">지금 구매하기</td>
+															<!-- a태그 삭제 -->
+														</tr>
+														<tr>
+															<th class="left_title">해시태그</th>
+															<td class="right_detail">
+																<div class="hash_tag">
+																	<p><a href="">#활용도200점</a></p>
+																	<p><a href="">#쉽죠</a></p>
+																	<p><a href="">#남자는_셔츠</a></p>
+																	<p><a href="">#다양한_원단</a></p>
+																</div>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+										<div class="target_wrap">
+											<div class="target_title">추정 타겟팅 정보</div>
+											<div class="target_detail">
+												<table>
+													<colgroup>
+														<col width="80"/>
+														<col width="183"/>
+														<col width="80"/>
+														<col width="183"/>
+													</colgroup>
+													<tbody>
+														<tr>
+															<th><img src="images/icon/pop_right_men.jpg" alt="남자" /></th>
+															<td>
+																<div>
+																	<p>20-30세 (대한민국,&nbsp;서울)</p>
+																	<p>35-40세 (대한민국,&nbsp;경기도)</p>
+																</div>
+															</td>
+															<th><img src="images/icon/pop_right_girl.jpg" alt="여자" /></th>
+															<td>-</td>
+														</tr>
+													</tbody>
+												</table>
+												<p class="info_text">*페이스북 표본 집단을 토대로 추정한 정보이므로 100% 일치하지 않을 수도 있습니다.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--/////////////////////////////////////////////////////// 컨텐츠 상세 팝업 END ///////////////////////////////////////////////////////-->
+					</li>
+					<!-- 템플릿 추가 2017-09-14-->
+				</ul>
+				<!-- 템플릿 추가 2017 09 15 -->
+				<ul>
+					<li class="contents_wrapper">
+						<div class="contents_title">
+							<p>KB국민카드</p>
+						</div>
+						<div class="main_contents">
+							<!-- 마스크-->
+							<div class="main_contents_mask"></div>
+							<!-- 마스크-->
+							<div class="cont_name_wrap">
+								<div class="cont_name">
+									<div><img src="images/icon/icon_bg.jpg" alt="" ></div>
+									<div>
+										<p>KB국민카드</p>
+										<p>Sponsored</p>
+									</div>
+								</div>
+								<!-- 좋아요 버튼 삭제 -->
+								<!-- <div class="cont_like_btn">페이지 좋아요</div> -->
+								<!-- // 좋아요 버튼 삭제 -->							</div>
+							<div class="cont_tag">
+								<p class="tag_text">여름이라 더우니까 시원~하게 한방 발급!</p>
+								<p class="tag_hash">#간편하고 #빠르게 #24시간_발급가능</p>
+							</div>
+							<div class="cont_main_tem_09">
+								<div class="main_img">
+									<div><img src="images/common/cont_main_img.jpg" alt="" /></div>
+									<div><img src="images/common/cont_main_img.jpg" alt="" /></div>
+								</div>
+							</div>
+							<div class="favorite_wrap">
+								<div><button><img src="images/icon/contents_img01.jpg" alt="" /></button><span>999,999</span></div>
+								<div><button><img src="images/icon/contents_img02.jpg" alt="" /></button><span>999,999</span></div>
+								<div><button><img src="images/icon/contents_img03.jpg" alt="" /></button><span>999,999</span></div>
+								<div><button><img src="images/icon/contents_img04.jpg" alt="" /></button><span>999,999</span></div>
+							</div>
+						</div>
+						<div class="contents_date">
+							<p>2017-08-16,&nbsp;10:00&nbsp;PM</p>
+						</div>
+						<!--/////////////////////////////////////////////////////// 컨텐츠 상세 팝업 START ///////////////////////////////////////////////////////-->
+						<div class="contents_pop">
+							<div class="pop_contents_wrap">
+								<div class="pop_title_wrap">
+									<div class="title_left">
+											<span class="page_name">페이지명</span>
+											<span class="cate_name">카테고리명</span>
+									</div>
+									<div class="title_right pop_close"><img src="images/icon/pop_close_btn.png" alt="" /></div>
+								</div>
+								<div class="pop_contents">
+									<div class="contents_left">
+										<div class="pop_inner_contents_tem_09">
+											<div class="pop_cont_name_wrap">
+												<div class="pop_cont_name">
+													<div><img src="images/icon/pop_icon_bg.jpg" alt="" ></div>
+													<div>
+														<p>KB국민카드</p>
+														<p>Sponsored</p>
+													</div>
+												</div>
+												<div class="pop_cont_like_btn">페이지 좋아요</div>
+											</div>
+											<div class="pop_cont_tag">
+												<p class="tag_text">여름이라 더우니까 시원~하게 한방 발급!</p>
+												<p class="tag_hash">#간편하고 #빠르게 #24시간_발급가능</p>
+											</div>
+											<div class="main_img">
+												<div><img src="images/common/cont_main_img.jpg" alt="" /></div>
+												<div><img src="images/common/cont_main_img.jpg" alt="" /></div>
+											</div>
+											<div class="pop_favorite_wrap">
+												<div><span><img src="images/icon/pop_contents_img_01.png" alt="" /></span><span>999,999</span></div>
+												<div><span><img src="images/icon/pop_contents_img_02.png" alt="" /></span><span>999,999</span></div>
+												<div><span><img src="images/icon/pop_contents_img_03.png" alt="" /></span><span>999,999</span></div>
+												<div><span><img src="images/icon/pop_contents_img_04.png" alt="" /></span><span>999,999</span></div>
+											</div>
+										</div>
+										<div class="pop_contents_date">
+											<div class="left_date">2017-08-16,&nbsp;10:00&nbsp;PM</div>
+											<div class="right">
+												<p><a href="" target="_blank">PC원본보기</a></p>
+												<p><a href="" target="_blank">Mobile 원본 보기</a></p>
+												<p><a href="" target="_blank">원본보기</a></p>
+											</div>
+										</div>
+									</div>
+									<div class="contents_right">
+										<div class="right_icon_wrap">
+											<div>
+												<p><img src="images/icon/pop_right_icon_01.jpg" alt="컴퓨터" /></p>
+												<p>PC</p>
+											</div>
+											<div>
+												<p><img src="images/icon/form_icon_01.jpg" alt="단일동영상" /></p>
+												<p>단일 동영상</p>
+												<!-- <p><img src="images/icon/form_icon_02.jpg" alt="단일이미지" /></p>
+												<p>단일 이미지</p>
+												<p><img src="images/icon/form_icon_03.jpg" alt="슬라이드" /></p>
+												<p>슬라이드</p>
+												<p><img src="images/icon/form_icon_04.jpg" alt="슬라이드쇼" /></p>
+												<p>슬라이드 쇼</p>
+												<p><img src="images/icon/form_icon_05.jpg" alt="여러 이미지" /></p>
+												<p>여러 이미지</p> -->
+											</div>
+											<div>
+												<p><img src="images/icon/color_1.jpg" alt="전체" /></p>
+												<p>전체</p>
+												<!-- <p><img src="images/icon/color_2.jpg" alt="갈색" /></p>
+												<p>갈색</p>
+												<p><img src="images/icon/color_3.jpg" alt="빨강" /></p>
+												<p>빨강</p>
+												<p><img src="images/icon/color_4.jpg" alt="주황" /></p>
+												<p>주황</p>
+												<p><img src="images/icon/color_5.jpg" alt="노랑" /></p>
+												<p>노랑</p>
+												<p><img src="images/icon/color_6.jpg" alt="연두" /></p>
+												<p>연두</p>
+												<p><img src="images/icon/color_7.jpg" alt="초록" /></p>
+												<p>초록</p>
+												<p><img src="images/icon/color_8.jpg" alt="하늘" /></p>
+												<p>하늘</p>
+												<p><img src="images/icon/color_9.jpg" alt="파랑" /></p>
+												<p>파랑</p>
+												<p><img src="images/icon/color_10.jpg" alt="분홍" /></p>
+												<p>분홍</p>
+												<p><img src="images/icon/color_11.jpg" alt="보라" /></p>
+												<p>보라</p>
+												<p><img src="images/icon/white_color.jpg" alt="흰색" /></p>
+												<p>흰색</p>
+												<p><img src="images/icon/color_13.jpg" alt="회색" /></p>
+												<p>회색</p>
+												<p><img src="images/icon/color_14.jpg" alt="검정" /></p>
+												<p>검정</p> -->
+											</div>
+										</div>
+										<div class="pop_detail">
+											<div class="detail_wrap">
+												<table class="detail_table_wrap">
+													<colgroup>
+														<col width="80"/>
+														<col width="451"/>
+													</colgroup>
+													<tbody>
+														<tr>
+															<th class="left_title"><div>문구</div></th>
+															<td class="right_detail">
+																<div class="detail_text">
+																	<p>해외여행 가세요? 직구 좋아하세요?</p>
+																	<p>KB국민카드가 해외이용 고객님께 드리는</p>
+																	<p>놀라운 혜택을 확인하세요!</p>
+																</div>
+																<div class="detail_text_limit">(1,345 Text)</div>
+																<div class="detail_view">
+																	<p class="detail_view_title">*자세히 보기</p>
+																	<p>PC - <a href="">https://goo.gl/985bqp</a></p>
+																	<p>모바일 - <a href="">https://goo.gl/4iwmMc</a></p>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<th class="left_title">제목</th>
+															<td class="right_detail">
+																<p>30년 장인의 손을 거친 특별함 59,000원~ </p>
+																<p class="text_info"><span class="detail_text_limit">(1,345 Text)</span></p>
+															</td>
+														</tr>
+														<tr>
+															<th class="left_title">링크설명</th>
+															<td class="right_detail">
+																<p>스트라이프는 괜찮은 셔츠의 기준이 높습니다.</p>
+																<p class="text_info"><span class="detail_text_limit">(1,345 Text)</span></p>
+															</td>
+														</tr>
+														<tr>
+															<th class="left_title">링크</th>
+															<td class="right_detail"><a href="">STRIPES.CO.KR</a></td>
+														</tr>
+														<tr>
+															<th class="left_title">행동유도</th>
+															<!-- a태그 삭제 -->
+															<td class="right_detail">지금 구매하기</td>
+															<!-- a태그 삭제 -->
+														</tr>
+														<tr>
+															<th class="left_title">해시태그</th>
+															<td class="right_detail">
+																<div class="hash_tag">
+																	<p><a href="">#활용도200점</a></p>
+																	<p><a href="">#쉽죠</a></p>
+																	<p><a href="">#남자는_셔츠</a></p>
+																	<p><a href="">#다양한_원단</a></p>
+																</div>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+										<div class="target_wrap">
+											<div class="target_title">추정 타겟팅 정보</div>
+											<div class="target_detail">
+												<table>
+													<colgroup>
+														<col width="80"/>
+														<col width="183"/>
+														<col width="80"/>
+														<col width="183"/>
+													</colgroup>
+													<tbody>
+														<tr>
+															<th><img src="images/icon/pop_right_men.jpg" alt="남자" /></th>
+															<td>
+																<div>
+																	<p>20-30세 (대한민국,&nbsp;서울)</p>
+																	<p>35-40세 (대한민국,&nbsp;경기도)</p>
+																</div>
+															</td>
+															<th><img src="images/icon/pop_right_girl.jpg" alt="여자" /></th>
+															<td>-</td>
+														</tr>
+													</tbody>
+												</table>
+												<p class="info_text">*페이스북 표본 집단을 토대로 추정한 정보이므로 100% 일치하지 않을 수도 있습니다.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--/////////////////////////////////////////////////////// 컨텐츠 상세 팝업 END ///////////////////////////////////////////////////////-->
+					</li>
+					<li class="contents_wrapper">
+						<div class="contents_title">
+							<p>KB국민카드</p>
+						</div>
+						<div class="main_contents">
+							<!-- 마스크-->
+							<div class="main_contents_mask"></div>
+							<!-- 마스크-->
+							<div class="cont_name_wrap">
+								<div class="cont_name">
+									<div><img src="images/icon/icon_bg.jpg" alt="" ></div>
+									<div>
+										<p>KB국민카드</p>
+										<p>Sponsored</p>
+									</div>
+								</div>
+								<!-- 좋아요 버튼 삭제 -->
+								<!-- <div class="cont_like_btn">페이지 좋아요</div> -->
+								<!-- // 좋아요 버튼 삭제 -->							</div>
+							<div class="cont_tag">
+								<p class="tag_text">여름이라 더우니까 시원~하게 한방 발급!</p>
+								<p class="tag_hash">#간편하고 #빠르게 #24시간_발급가능</p>
+							</div>
+							<div class="cont_main_tem_10">
+								<div class="main_img">
+									<div><img src="images/common/cont_main_img.jpg" alt="" /></div>
+									<div><img src="images/common/cont_main_img.jpg" alt="" /></div>
+									<div><img src="images/common/cont_main_img.jpg" alt="" /></div>
+								</div>
+							</div>
+							<div class="favorite_wrap">
+								<div><button><img src="images/icon/contents_img01.jpg" alt="" /></button><span>999,999</span></div>
+								<div><button><img src="images/icon/contents_img02.jpg" alt="" /></button><span>999,999</span></div>
+								<div><button><img src="images/icon/contents_img03.jpg" alt="" /></button><span>999,999</span></div>
+								<div><button><img src="images/icon/contents_img04.jpg" alt="" /></button><span>999,999</span></div>
+							</div>
+						</div>
+						<div class="contents_date">
+							<p>2017-08-16,&nbsp;10:00&nbsp;PM</p>
+						</div>
+						<!--/////////////////////////////////////////////////////// 컨텐츠 상세 팝업 START ///////////////////////////////////////////////////////-->
+						<div class="contents_pop">
+							<div class="pop_contents_wrap">
+								<div class="pop_title_wrap">
+									<div class="title_left">
+											<span class="page_name">페이지명</span>
+											<span class="cate_name">카테고리명</span>
+									</div>
+									<div class="title_right pop_close"><img src="images/icon/pop_close_btn.png" alt="" /></div>
+								</div>
+								<div class="pop_contents">
+									<div class="contents_left">
+										<div class="pop_inner_contents_tem_10">
+											<div class="pop_cont_name_wrap">
+												<div class="pop_cont_name">
+													<div><img src="images/icon/pop_icon_bg.jpg" alt="" ></div>
+													<div>
+														<p>KB국민카드</p>
+														<p>Sponsored</p>
+													</div>
+												</div>
+												<div class="pop_cont_like_btn">페이지 좋아요</div>
+											</div>
+											<div class="pop_cont_tag">
+												<p class="tag_text">여름이라 더우니까 시원~하게 한방 발급!</p>
+												<p class="tag_hash">#간편하고 #빠르게 #24시간_발급가능</p>
+											</div>
+											<div class="main_img">
+												<div><img src="images/common/cont_main_img.jpg" alt="" /></div>
+												<div><img src="images/common/cont_main_img.jpg" alt="" /></div>
+												<div><img src="images/common/cont_main_img.jpg" alt="" /></div>
+											</div>
+											<div class="pop_favorite_wrap">
+												<div><span><img src="images/icon/pop_contents_img_01.png" alt="" /></span><span>999,999</span></div>
+												<div><span><img src="images/icon/pop_contents_img_02.png" alt="" /></span><span>999,999</span></div>
+												<div><span><img src="images/icon/pop_contents_img_03.png" alt="" /></span><span>999,999</span></div>
+												<div><span><img src="images/icon/pop_contents_img_04.png" alt="" /></span><span>999,999</span></div>
+											</div>
+										</div>
+										<div class="pop_contents_date">
+											<div class="left_date">2017-08-16,&nbsp;10:00&nbsp;PM</div>
+											<div class="right">
+												<p><a href="" target="_blank">PC원본보기</a></p>
+												<p><a href="" target="_blank">Mobile 원본 보기</a></p>
+												<p><a href="" target="_blank">원본보기</a></p>
+											</div>
+										</div>
+									</div>
+									<div class="contents_right">
+										<div class="right_icon_wrap">
+											<div>
+												<p><img src="images/icon/pop_right_icon_01.jpg" alt="컴퓨터" /></p>
+												<p>PC</p>
+											</div>
+											<div>
+												<p><img src="images/icon/form_icon_01.jpg" alt="단일동영상" /></p>
+												<p>단일 동영상</p>
+												<!-- <p><img src="images/icon/form_icon_02.jpg" alt="단일이미지" /></p>
+												<p>단일 이미지</p>
+												<p><img src="images/icon/form_icon_03.jpg" alt="슬라이드" /></p>
+												<p>슬라이드</p>
+												<p><img src="images/icon/form_icon_04.jpg" alt="슬라이드쇼" /></p>
+												<p>슬라이드 쇼</p>
+												<p><img src="images/icon/form_icon_05.jpg" alt="여러 이미지" /></p>
+												<p>여러 이미지</p> -->
+											</div>
+											<div>
+												<p><img src="images/icon/color_1.jpg" alt="전체" /></p>
+												<p>전체</p>
+												<!-- <p><img src="images/icon/color_2.jpg" alt="갈색" /></p>
+												<p>갈색</p>
+												<p><img src="images/icon/color_3.jpg" alt="빨강" /></p>
+												<p>빨강</p>
+												<p><img src="images/icon/color_4.jpg" alt="주황" /></p>
+												<p>주황</p>
+												<p><img src="images/icon/color_5.jpg" alt="노랑" /></p>
+												<p>노랑</p>
+												<p><img src="images/icon/color_6.jpg" alt="연두" /></p>
+												<p>연두</p>
+												<p><img src="images/icon/color_7.jpg" alt="초록" /></p>
+												<p>초록</p>
+												<p><img src="images/icon/color_8.jpg" alt="하늘" /></p>
+												<p>하늘</p>
+												<p><img src="images/icon/color_9.jpg" alt="파랑" /></p>
+												<p>파랑</p>
+												<p><img src="images/icon/color_10.jpg" alt="분홍" /></p>
+												<p>분홍</p>
+												<p><img src="images/icon/color_11.jpg" alt="보라" /></p>
+												<p>보라</p>
+												<p><img src="images/icon/white_color.jpg" alt="흰색" /></p>
+												<p>흰색</p>
+												<p><img src="images/icon/color_13.jpg" alt="회색" /></p>
+												<p>회색</p>
+												<p><img src="images/icon/color_14.jpg" alt="검정" /></p>
+												<p>검정</p> -->
+											</div>
+										</div>
+										<div class="pop_detail">
+											<div class="detail_wrap">
+												<table class="detail_table_wrap">
+													<colgroup>
+														<col width="80"/>
+														<col width="451"/>
+													</colgroup>
+													<tbody>
+														<tr>
+															<th class="left_title"><div>문구</div></th>
+															<td class="right_detail">
+																<div class="detail_text">
+																	<p>해외여행 가세요? 직구 좋아하세요?</p>
+																	<p>KB국민카드가 해외이용 고객님께 드리는</p>
+																	<p>놀라운 혜택을 확인하세요!</p>
+																</div>
+																<div class="detail_text_limit">(1,345 Text)</div>
+																<div class="detail_view">
+																	<p class="detail_view_title">*자세히 보기</p>
+																	<p>PC - <a href="">https://goo.gl/985bqp</a></p>
+																	<p>모바일 - <a href="">https://goo.gl/4iwmMc</a></p>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<th class="left_title">제목</th>
+															<td class="right_detail">
+																<p>30년 장인의 손을 거친 특별함 59,000원~ </p>
+																<p class="text_info"><span class="detail_text_limit">(1,345 Text)</span></p>
+															</td>
+														</tr>
+														<tr>
+															<th class="left_title">링크설명</th>
+															<td class="right_detail">
+																<p>스트라이프는 괜찮은 셔츠의 기준이 높습니다.</p>
+																<p class="text_info"><span class="detail_text_limit">(1,345 Text)</span></p>
+															</td>
+														</tr>
+														<tr>
+															<th class="left_title">링크</th>
+															<td class="right_detail"><a href="">STRIPES.CO.KR</a></td>
+														</tr>
+														<tr>
+															<th class="left_title">행동유도</th>
+															<!-- a태그 삭제 -->
+															<td class="right_detail">지금 구매하기</td>
+															<!-- a태그 삭제 -->
+														</tr>
+														<tr>
+															<th class="left_title">해시태그</th>
+															<td class="right_detail">
+																<div class="hash_tag">
+																	<p><a href="">#활용도200점</a></p>
+																	<p><a href="">#쉽죠</a></p>
+																	<p><a href="">#남자는_셔츠</a></p>
+																	<p><a href="">#다양한_원단</a></p>
+																</div>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+										<div class="target_wrap">
+											<div class="target_title">추정 타겟팅 정보</div>
+											<div class="target_detail">
+												<table>
+													<colgroup>
+														<col width="80"/>
+														<col width="183"/>
+														<col width="80"/>
+														<col width="183"/>
+													</colgroup>
+													<tbody>
+														<tr>
+															<th><img src="images/icon/pop_right_men.jpg" alt="남자" /></th>
+															<td>
+																<div>
+																	<p>20-30세 (대한민국,&nbsp;서울)</p>
+																	<p>35-40세 (대한민국,&nbsp;경기도)</p>
+																</div>
+															</td>
+															<th><img src="images/icon/pop_right_girl.jpg" alt="여자" /></th>
+															<td>-</td>
+														</tr>
+													</tbody>
+												</table>
+												<p class="info_text">*페이스북 표본 집단을 토대로 추정한 정보이므로 100% 일치하지 않을 수도 있습니다.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--/////////////////////////////////////////////////////// 컨텐츠 상세 팝업 END ///////////////////////////////////////////////////////-->
+					</li>
+					<li class="contents_wrapper">
+						<div class="contents_title">
+							<p>KB국민카드</p>
+						</div>
+						<div class="main_contents">
+							<!-- 마스크-->
+							<div class="main_contents_mask"></div>
+							<!-- 마스크-->
+							<div class="cont_name_wrap">
+								<div class="cont_name">
+									<div><img src="images/icon/icon_bg.jpg" alt="" ></div>
+									<div>
+										<p>KB국민카드</p>
+										<p>Sponsored</p>
+									</div>
+								</div>
+								<!-- 좋아요 버튼 삭제 -->
+								<!-- <div class="cont_like_btn">페이지 좋아요</div> -->
+								<!-- // 좋아요 버튼 삭제 -->							</div>
+							<div class="cont_tag">
+								<p class="tag_text">여름이라 더우니까 시원~하게 한방 발급!</p>
+								<p class="tag_hash">#간편하고 #빠르게 #24시간_발급가능</p>
+							</div>
+							<div class="cont_main_tem_11">
+								<div class="main_img">
+									<div class="left_img"><img src="images/common/cont_main_img.jpg" alt="" /></div>
+									<div class="right_img">
+										<img src="images/common/cont_main_img.jpg" alt="" />
+										<img src="images/common/cont_main_img.jpg" alt="" />
+									</div>
+								</div>
+							</div>
+							<div class="favorite_wrap">
+								<div><button><img src="images/icon/contents_img01.jpg" alt="" /></button><span>999,999</span></div>
+								<div><button><img src="images/icon/contents_img02.jpg" alt="" /></button><span>999,999</span></div>
+								<div><button><img src="images/icon/contents_img03.jpg" alt="" /></button><span>999,999</span></div>
+								<div><button><img src="images/icon/contents_img04.jpg" alt="" /></button><span>999,999</span></div>
+							</div>
+						</div>
+						<div class="contents_date">
+							<p>2017-08-16,&nbsp;10:00&nbsp;PM</p>
+						</div>
+						<!--/////////////////////////////////////////////////////// 컨텐츠 상세 팝업 START ///////////////////////////////////////////////////////-->
+						<div class="contents_pop">
+							<div class="pop_contents_wrap">
+								<div class="pop_title_wrap">
+									<div class="title_left">
+											<span class="page_name">페이지명</span>
+											<span class="cate_name">카테고리명</span>
+									</div>
+									<div class="title_right pop_close"><img src="images/icon/pop_close_btn.png" alt="" /></div>
+								</div>
+								<div class="pop_contents">
+									<div class="contents_left">
+										<div class="pop_inner_contents_tem_11">
+											<div class="pop_cont_name_wrap">
+												<div class="pop_cont_name">
+													<div><img src="images/icon/pop_icon_bg.jpg" alt="" ></div>
+													<div>
+														<p>KB국민카드</p>
+														<p>Sponsored</p>
+													</div>
+												</div>
+												<div class="pop_cont_like_btn">페이지 좋아요</div>
+											</div>
+											<div class="pop_cont_tag">
+												<p class="tag_text">여름이라 더우니까 시원~하게 한방 발급!</p>
+												<p class="tag_hash">#간편하고 #빠르게 #24시간_발급가능</p>
+											</div>
+											<div class="main_img">
+												<div class="left_img"><img src="images/common/cont_main_img.jpg" alt="" /></div>
+												<div class="right_img">
+													<img src="images/common/cont_main_img.jpg" alt="" />
+													<img src="images/common/cont_main_img.jpg" alt="" />
+												</div>
+											</div>
+											<div class="pop_favorite_wrap">
+												<div><span><img src="images/icon/pop_contents_img_01.png" alt="" /></span><span>999,999</span></div>
+												<div><span><img src="images/icon/pop_contents_img_02.png" alt="" /></span><span>999,999</span></div>
+												<div><span><img src="images/icon/pop_contents_img_03.png" alt="" /></span><span>999,999</span></div>
+												<div><span><img src="images/icon/pop_contents_img_04.png" alt="" /></span><span>999,999</span></div>
+											</div>
+										</div>
+										<div class="pop_contents_date">
+											<div class="left_date">2017-08-16,&nbsp;10:00&nbsp;PM</div>
+											<div class="right">
+												<p><a href="" target="_blank">PC원본보기</a></p>
+												<p><a href="" target="_blank">Mobile 원본 보기</a></p>
+												<p><a href="" target="_blank">원본보기</a></p>
+											</div>
+										</div>
+									</div>
+									<div class="contents_right">
+										<div class="right_icon_wrap">
+											<div>
+												<p><img src="images/icon/pop_right_icon_01.jpg" alt="컴퓨터" /></p>
+												<p>PC</p>
+											</div>
+											<div>
+												<p><img src="images/icon/form_icon_01.jpg" alt="단일동영상" /></p>
+												<p>단일 동영상</p>
+												<!-- <p><img src="images/icon/form_icon_02.jpg" alt="단일이미지" /></p>
+												<p>단일 이미지</p>
+												<p><img src="images/icon/form_icon_03.jpg" alt="슬라이드" /></p>
+												<p>슬라이드</p>
+												<p><img src="images/icon/form_icon_04.jpg" alt="슬라이드쇼" /></p>
+												<p>슬라이드 쇼</p>
+												<p><img src="images/icon/form_icon_05.jpg" alt="여러 이미지" /></p>
+												<p>여러 이미지</p> -->
+											</div>
+											<div>
+												<p><img src="images/icon/color_1.jpg" alt="전체" /></p>
+												<p>전체</p>
+												<!-- <p><img src="images/icon/color_2.jpg" alt="갈색" /></p>
+												<p>갈색</p>
+												<p><img src="images/icon/color_3.jpg" alt="빨강" /></p>
+												<p>빨강</p>
+												<p><img src="images/icon/color_4.jpg" alt="주황" /></p>
+												<p>주황</p>
+												<p><img src="images/icon/color_5.jpg" alt="노랑" /></p>
+												<p>노랑</p>
+												<p><img src="images/icon/color_6.jpg" alt="연두" /></p>
+												<p>연두</p>
+												<p><img src="images/icon/color_7.jpg" alt="초록" /></p>
+												<p>초록</p>
+												<p><img src="images/icon/color_8.jpg" alt="하늘" /></p>
+												<p>하늘</p>
+												<p><img src="images/icon/color_9.jpg" alt="파랑" /></p>
+												<p>파랑</p>
+												<p><img src="images/icon/color_10.jpg" alt="분홍" /></p>
+												<p>분홍</p>
+												<p><img src="images/icon/color_11.jpg" alt="보라" /></p>
+												<p>보라</p>
+												<p><img src="images/icon/white_color.jpg" alt="흰색" /></p>
+												<p>흰색</p>
+												<p><img src="images/icon/color_13.jpg" alt="회색" /></p>
+												<p>회색</p>
+												<p><img src="images/icon/color_14.jpg" alt="검정" /></p>
+												<p>검정</p> -->
+											</div>
+										</div>
+										<div class="pop_detail">
+											<div class="detail_wrap">
+												<table class="detail_table_wrap">
+													<colgroup>
+														<col width="80"/>
+														<col width="451"/>
+													</colgroup>
+													<tbody>
+														<tr>
+															<th class="left_title"><div>문구</div></th>
+															<td class="right_detail">
+																<div class="detail_text">
+																	<p>해외여행 가세요? 직구 좋아하세요?</p>
+																	<p>KB국민카드가 해외이용 고객님께 드리는</p>
+																	<p>놀라운 혜택을 확인하세요!</p>
+																</div>
+																<div class="detail_text_limit">(1,345 Text)</div>
+																<div class="detail_view">
+																	<p class="detail_view_title">*자세히 보기</p>
+																	<p>PC - <a href="">https://goo.gl/985bqp</a></p>
+																	<p>모바일 - <a href="">https://goo.gl/4iwmMc</a></p>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<th class="left_title">제목</th>
+															<td class="right_detail">
+																<p>30년 장인의 손을 거친 특별함 59,000원~ </p>
+																<p class="text_info"><span class="detail_text_limit">(1,345 Text)</span></p>
+															</td>
+														</tr>
+														<tr>
+															<th class="left_title">링크설명</th>
+															<td class="right_detail">
+																<p>스트라이프는 괜찮은 셔츠의 기준이 높습니다.</p>
+																<p class="text_info"><span class="detail_text_limit">(1,345 Text)</span></p>
+															</td>
+														</tr>
+														<tr>
+															<th class="left_title">링크</th>
+															<td class="right_detail"><a href="">STRIPES.CO.KR</a></td>
+														</tr>
+														<tr>
+															<th class="left_title">행동유도</th>
+															<!-- a태그 삭제 -->
+															<td class="right_detail">지금 구매하기</td>
+															<!-- a태그 삭제 -->
+														</tr>
+														<tr>
+															<th class="left_title">해시태그</th>
+															<td class="right_detail">
+																<div class="hash_tag">
+																	<p><a href="">#활용도200점</a></p>
+																	<p><a href="">#쉽죠</a></p>
+																	<p><a href="">#남자는_셔츠</a></p>
+																	<p><a href="">#다양한_원단</a></p>
+																</div>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+										<div class="target_wrap">
+											<div class="target_title">추정 타겟팅 정보</div>
+											<div class="target_detail">
+												<table>
+													<colgroup>
+														<col width="80"/>
+														<col width="183"/>
+														<col width="80"/>
+														<col width="183"/>
+													</colgroup>
+													<tbody>
+														<tr>
+															<th><img src="images/icon/pop_right_men.jpg" alt="남자" /></th>
+															<td>
+																<div>
+																	<p>20-30세 (대한민국,&nbsp;서울)</p>
+																	<p>35-40세 (대한민국,&nbsp;경기도)</p>
+																</div>
+															</td>
+															<th><img src="images/icon/pop_right_girl.jpg" alt="여자" /></th>
+															<td>-</td>
+														</tr>
+													</tbody>
+												</table>
+												<p class="info_text">*페이스북 표본 집단을 토대로 추정한 정보이므로 100% 일치하지 않을 수도 있습니다.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--/////////////////////////////////////////////////////// 컨텐츠 상세 팝업 END ///////////////////////////////////////////////////////-->
+					</li>
+				</ul>
+				<!-- // 템플릿 추가 2017 09 15 -->
+				<!-- 메인 컨텐츠 페이징 -->
+				<div class="paging">
+					<div>
+					<ul>
+						<li class="paging_icon"><a href=""><img src="images/icon/paging_01.png" alt="" /></a></li>
+						<li class="paging_icon"><a href=""><img src="images/icon/paging_03.png" alt="" /></a></li>
+						<li class="now"><a href="">1</a></li>
+						<li><a href="">2</a></li>
+						<li><a href="">3</a></li>
+						<li><a href="">4</a></li>
+						<li><a href="">5</a></li>
+						<li><a href="">6</a></li>
+						<li><a href="">7</a></li>
+						<li><a href="">8</a></li>
+						<li><a href="">9</a></li>
+						<li class="paging_icon"><a href=""><img src="images/icon/paging_02.png" alt="" /></a></li>
+						<li class="paging_icon"><a href=""><img src="images/icon/paging_04.png" alt="" /></a></li>
+					</ul>
+				</div>
+				<!-- 메인 컨텐츠 페이징 -->
+			</div>
+		</div>
+		<footer id="footer">
+			<p>&copy; <span>eMFORCE</span> Corp.</p>
+		</footer>
+	</div>
+</body>
+</html>

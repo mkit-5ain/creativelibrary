@@ -1,0 +1,9 @@
+@mixin indent($s){
+  padding-left: $s * 1px;
+  text-indent: -$s * 1px;
+}
+
+@mixin indent2($s){
+  padding-left: $s * 1em;
+  text-indent: -$s * 1em;
+}

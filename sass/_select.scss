@@ -1,0 +1,28 @@
+.selectbox {
+    position: relative;
+    display: inline-block;
+    background: url("https://sccd.wooribank.com/img/ccd/cloan/cl_pc/selectbox_bg.gif") 0 0 no-repeat;
+    width: 120px;
+    height: 50px;
+    text-align: left;
+    label {
+        position: absolute;
+        font-weight: bold;
+        top: 18px;
+        width: 100%;
+        white-space: nowrap;
+        line-height: 1;
+        padding-left: 17px;
+        font-size: 16px;
+    }
+    select {
+        -moz-opacity: 0;
+        -khtml-opacity: 0;
+        -webkit-opacity: 0;
+        opacity: 0;
+        -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+        filter: alpha(opacity=0);
+        width: 100%;
+        height: 100%;
+    }
+}

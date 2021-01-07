@@ -1,0 +1,103 @@
+html {
+  color: #2b323f;
+  background: #FFF;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  html *,
+  html *::before,
+  html *::after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit; }
+
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary, input, button {
+  display: none;
+  font-family: "NanumSquare";
+  margin: 0;
+  padding: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+fieldset,
+img {
+  border: 0; }
+
+/*
+  TODO think about hanlding inheritence differently, maybe letting IE6 fail a bit...
+*/
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal; }
+
+a {
+  text-decoration: none; }
+
+ol,
+ul {
+  list-style: none; }
+
+caption,
+th {
+  text-align: left; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+q:before,
+q:after {
+  content: ''; }
+
+abbr,
+acronym {
+  border: 0;
+  font-variant: normal; }
+
+/* to preserve line-height and selector appearance */
+sup {
+  vertical-align: text-top; }
+
+sub {
+  vertical-align: text-bottom; }
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit; }
+
+/*to enable resizing for IE*/
+input,
+textarea,
+select {
+  *font-size: 100%; }
+
+/*because legend doesn't inherit in IE */
+legend {
+  color: #000; }
+
+img {
+  display: block; }
+
+button {
+  outline: 0;
+  border: none;
+  cursor: pointer;
+  background: none; }
